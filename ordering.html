@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ordering.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="ordering.html" ><b>Home</b></a></lI>
+                <li><a href="menu.html" ><b>Menu</b></a></li>
+                <li><a href="about.html"><b>About</b>
+                </a></li>
+                <li><a href="contact.html"><b>Contact</b></a></li>
+
+            
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="Enter your location or cuisine">
+            </div>
+            <div class="searchoptions"></div>
+            <div class="signin">
+              <a href="signin.html">
+                <button class="login" onclick="signin">Sign-in/Sign-up</button>
+              </a>
+            </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="image"></div>
+    <div class="head">
+        <h1 class="main" >FOOODIES!</h1>
+    </div>
+    <div class="para">
+      <ul>
+        <li> <b>◆Hungry? Order your favorite food from a variety of cuisines and restaurants near you.</li>
+        <li> ◆Craving for something delicious? Browse through our menu and get your food delivered fast and fresh.</li>
+        <li> ◆No time to cook? No problem. Just select your location and choose from hundreds of mouth-watering dishes at your fingertips.</li>
+        <li> ◆Enjoy the best food delivery service in town. Whether you want pizza, pasta, biryani, or sushi, we have it all.</li>
+        <li> ◆Satisfy your taste buds with our amazing food options. Order online and get ready to feast on your favorite food. </b></li>
+      </ul>
+    </div>
+    <div class="order">
+      <a href="rest.html">
+      <button class ="btn" onclick= " orderhere">Order Now</button> </a></div>
+    <!-- <a href="#"><button class="btn2" onclick="Sign in/Sign up">Sign In/Sign Up</button></a>   -->
+    <!-- <p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button> -->
+
+
+<!-- <div class="location">
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script></div> -->
+<script>document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+</script>
+</body>
+</html>

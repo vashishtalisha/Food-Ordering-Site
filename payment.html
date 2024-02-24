@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:url(images/payment.webp);
+    background-size: cover;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    max-width: 800px;
+    margin: 20PX auto;
+    padding: 20px;
+    background-color:rgb(39, 69, 61);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.payment-options {
+    display:flex;
+    flex-direction: column;
+}
+
+.payment-option {
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #555;
+}
+footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px 0;
+    font-size: medium;
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateways - Food Ordering</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>FOOODIES ! </h1>
+        <nav>
+            <ul>
+                <li><a href="ordering.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Select a Payment Gateway</h2>
+        <div class="payment-options">
+            <div class="payment-option">
+                <input type="radio" id="creditCard"  name="paymentMethod" value="creditCard">
+                <label for="creditCard">CREDIT CARD</label>
+            </div>
+                                        <div class="credit-card-fields">
+                                            <h2>Credit Card Details</h2>
+                                            
+                                            <!-- Credit card form fields -->
+                                            <label for="cardholder_name">Cardholder Name:</label>
+                                            <input type="text" id="cardholder_name" name="cardholder_name" required><br><br>
+                                
+                                            <label for="card_number">Card Number:</label>
+                                            <input type="text" id="card_number" name="card_number" required><br><br>
+                                
+                                            <label for="expiry_date">Expiry Date (MM/YYYY):</label>
+                                            <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YYYY" required><br><br>
+                                
+                                            <label for="cvv">CVV:</label>
+                                            <input type="text" id="cvv" name="cvv" required><br><br><br>
+                                        </div> 
+                                        <b><hr></b>
+            
+                                        <div class="payment-options">
+                                            <div class="payment-option">
+                                                <input type="radio" id="DEBIT CARD"  name="paymentMethod" value="debitCard">
+                                                <label for="debitCard">DEBIT CARD</label>
+                                            </div>
+                                                                        <div class="credit-card-fields">
+                                                                            <h2>Debit card details</h2>
+                                                                            
+                                                                            <!-- Credit card form fields -->
+                                                                            <label for="cardholder_name">Cardholder Name:</label>
+                                                                            <input type="text" id="cardholder_name" name="cardholder_name" required><br><br>
+                                                                
+                                                                            <label for="card_number">Card Number:</label>
+                                                                            <input type="text" id="card_number" name="card_number" required><br><br>
+                                                                
+                                                                            <label for="expiry_date">Expiry Date (MM/YYYY):</label>
+                                                                            <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YYYY" required><br><br>
+                                                                
+                                                                            <label for="cvv">CVV:</label>
+                                                                            <input type="text" id="cvv" name="cvv" required><br><br><br>
+                                                                        </div> 
+                                                                        <b><hr></b>
+            <div class="payment-option">
+                <input type="radio" id="CASH ON DELIVERY" name="paymentMethod" value="CASH ON DELIVERY">
+                <label for="CASH ON DELIVERY">CASH ON DELIVERY</label>
+            </div> <br><br>
+            <b><hr></b>
+
+
+            <div class="payment-option">
+                <input type="radio" id="googlePay" name="paymentMethod" value="googlePay">
+                <label for="googlePay">Google Pay/ Phone Pay / Paytm / Any Other UPI service</label><br><br>
+                
+
+
+                                            <div>
+                                                <!-- Google Pay form fields (simulated) -->
+                                                <label for="google_pay_email">Phone number:</label>
+                                                <input type="email" id="google_pay_email" name="" required><br><br>
+                                    
+                                                <label for="google_pay_password">UPI ID:</label>
+                                                <input type="password" id="google_pay_password" name="google_pay_password" required><br><br>
+                                            </div>
+                                            <b><hr></b>
+            </div>
+        </div>
+        <a href="confirm.html">
+
+        <button id="checkoutButton">Proceed to Checkout</button></a>
+
+    </main>
+
+    <footer>
+        &copy; 2023 FOOODIES😎. All rights reserved.
+    </footer>
+</body>
+</html>

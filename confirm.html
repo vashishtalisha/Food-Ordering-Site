@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+<style>
+    /* Reset some default styles */
+body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and text color */
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    background-image: url(images/confirm.avif);
+    background-size:cover;
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.Confirmation {
+    background-color: #2fe606; /* Background color for the thank-you message */
+    color: #fff; /* Text color for the thank-you message */
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Style the main content */
+main {
+    max-width: 800px;
+    margin: 70px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    justify-content: center;
+}
+
+/* Style order details section */
+.order-details {
+    margin-bottom: 20px;
+}
+
+.order-details h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.order-details ul {
+    list-style-type: none;
+}
+
+.order-details li {
+    margin-bottom: 5px;
+}
+
+/* Style order again section */
+.order-again h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.order-again p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.order-again button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.order-again button:hover {
+    background-color: #ec6b01;
+    color: black;
+}
+.btn h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.btn p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #ec6b01;
+    color: rgb(255, 255, 255);
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>THANK YOU FOR ORDERING <br> </h1>
+    </header>
+    <section class="Confirmation">
+        <h2> <b> ORDER CONFIRMED ! 🎉🎊</b></h2>
+    </section>
+    <main>
+        <section class="order-details">
+            <h2>Order Details</h2>
+            <ul>
+                <li>Order ID: #003</li>
+                <li>Date: December 6, 2023</li>
+                <li>Total Amount: ₹ 1000</li>
+                <li>Delivery Address: Chitkara University</li>
+            </ul>
+        </section>
+        <section class="order-again">
+            <h2>Order Again</h2>
+            <p>Would you like to order the same items again?</p>
+            <p> OR <br></p>
+            <p>Want to explore more</p>
+
+            <a class="Order Again"
+            href="rest.html">
+            <button id="order-again-btn">Order Again</button> </a>
+
+            <a class ="Menu">
+                <a href="menu.html">
+                    <button class="btn" onclick= Menu> Menu </button>
+                </a>
+            <script>
+               
+        // Retrieve the cart data from local storage
+        let cartData = localStorage.getItem('cartData');
+
+        // Parse the JSON string back to an array of items
+        let cartItems = JSON.parse(cartData);
+
+        // Function to display cart items in the order details section
+        function displayOrderDetails() {
+            let orderDetailsList = document.getElementById('orderDetailsList');
+
+            // Clear existing content
+            orderDetailsList.innerHTML = '';
+
+            // Iterate through cart items and create list items
+            cartItems.forEach(item => {
+                let listItem = document.createElement('li');
+                listItem.textContent = `${item.quantity} x ${item.name} - ₹ ${item.price * item.quantity}`;
+                orderDetailsList.appendChild(listItem);
+            });
+        }
+
+        // Call the function to display order details
+        displayOrderDetails();
+
+        // Add an event listener for the "Order Again" button
+        document.getElementById('orderAgainBtn').addEventListener('click', () => {
+            // Redirect to the menu page (menu.html)
+            window.location.href = 'menu.html';
+        });
+   
+</script>
+        </section>
+
+    </main>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>&copy; 2023 FOOODIES😎 </p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,217 @@
+body{
+    background-image: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcGYtczExNy1hay0wMzYtMDJfMy5qcGc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.navbar{
+    /* background-color: blanchedalmond;*/
+    border-radius: 30px; 
+}
+.navbar ul{
+    overflow:auto;/*coz float karne par parent se overflow ho jaega*/
+}
+.navbar li{
+    float:left;
+    list-style:none;
+    margin:13px 20px;
+    color: white;
+    
+}
+.navbar li a{
+    text-decoration:none;
+    padding:3px 3px;
+    color:white;
+    font-size: 20px;
+}
+.navbar li a:hover{
+    text-decoration:none;
+    padding:3px 3px;
+    color:black;
+    background-color:white;
+}
+.search{
+    float:right;
+    color:brown;
+    padding:12px 12px;
+    /* height:50px; */
+
+}
+.navbar input{
+    border:2px solid black;
+    border-radius: 14px;
+    padding:7px 9px;
+    width:175px;
+}
+.content{
+    display:grid;
+    grid-template-columns: 50% auto;
+    gap:30px;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding-left: 20px;
+    margin-top: 120px;
+}
+.content .c_left{
+    display: block;
+    width:flex;
+}
+.content .c_left .info{
+    max-width: 100%;
+    display: flex;
+    flex-direction:column ;
+}
+.content .c_left .info h2{
+    font-size:60px;
+    font-family: sans-serif;
+    margin-bottom: 30px;
+    color: white;
+
+}
+.content .c_left .info p{
+    font-size: 23px;
+    font-family: sans-serif;
+    line-height: 2pc;
+    margin-bottom: 30px;
+    color: white;
+}
+.content .c_left button{
+    padding:10px 23px;
+    background-color: white;
+    color:black;
+    border-radius:5px ;
+    border:none;
+    cursor:pointer;
+
+}
+.content .c_left button:hover{
+    padding: 20px 30px;
+
+}
+.content .c_right{
+    display: block;
+    width: 100%;
+}
+.content .c_right img{
+    width:400px;
+    height:auto;
+    position: relative;
+    animation: rotate 7s  ease-in-out;
+    margin-right: 60px;
+    user-select: none;
+}
+@keyframes rotate{
+    0%{
+        transform:rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.category{
+    width:100%;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+.category .listitems{
+    width: 90%;
+    position:relative;
+    margin-top:100px;
+
+}
+.category .listitems h3{
+    font-size: 40px;
+    font-weight: 600;
+    font-family:Croissant One;
+    margin-bottom:30px;
+    color:rgb(248, 240, 240);
+}
+.category .listitems .cardlist{
+    display:grid;
+    gap:5rem;
+    grid-template-columns: repeat(3,30%);
+
+
+}
+.category .cardlist .card{
+    width:350px;
+    height: 350px;
+    display: block;
+    padding:10px;
+    /* outline:2px solid black ; */
+    position:relative;
+    /* background: black; */
+    color: aliceblue;
+}
+.category .cardlist .card img{
+    width:300px;
+    height:300px;
+    object-fit: cover;
+    object-position: center;
+    background-repeat: no-repeat;
+    position:absolute;
+    /* box-shadow: 0 20px 20px gray; */
+    border-radius:5%;
+    margin-top: 5px;
+    opacity:0.7;
+}
+.category .cardlist .card img:hover{
+    opacity:1;
+    box-shadow: 20px 20px 20px gray;
+}
+.category .card-list .card .fooditem{
+    padding:40px 0 10px;
+    color: white;
+    
+
+    
+}
+.category .card-list .card .fooditem h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    
+    margin:-47px;
+    font-family: Bubblegum Sans;
+}
+/* .hotels{
+    display:none;
+}
+.card .hotels{
+    display:block;
+    margin:50px;
+    padding:20px;
+
+}
+.hot1{
+    font-size: 30px;
+} */
+/* .hot1{
+    visibility: hidden;
+}
+.hot1:target{
+    visibility: visible;
+} */
+.fourth{
+    height:300px;
+    
+}
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3;
+}
+

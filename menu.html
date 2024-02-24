@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Croissant+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="first">
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="ordering.html" ><b>Home</b></a></lI>
+                    <li><a href="menu.html" ><b>Menu</b></a></li>
+                    <li><a href="about.html"><b>About</b>
+                    </a></li>
+                    <li><a href="contact.html"><b>Contact</b></a></li>
+    
+                
+                <div class="search">
+                    <input type="text" name="search" id="search" placeholder="Enter your location or cuisine">
+                </div>
+                </ul>
+            </nav>
+        </header>
+    </section>
+    <section class="grid">
+        <div class="content">
+            <div class="c_left">
+                <div class="info">
+                <h2>ORDER YOUR BEST<br>FOOD ANYTIME</h2>
+                <P >Hey, our best food is waiting for you.<br>
+                    We are always near to you with fresh items of food.
+                </P>
+                <a href="rest.html"><button class="btn" >Explore Food</button></div></a>
+            </div>
+            <div class="c_right">
+                <img src="images/logo.jpeg"></div>
+        </div>
+       
+    </section>
+    <section class="category">
+        <div class="listitems">
+            <h3>Cuisines</h3>
+            <div class="cardlist">
+                <div class="card">
+                    <div class="fooditem">
+                        <h3>Italian</h3>
+                    </div>
+                    <div><a href="italian2.html"><img src="https://www.tastingtable.com/img/gallery/20-italian-dishes-you-need-to-try-at-least-once/l-intro-1643403830.jpg" alt=""></a></div>
+!--                     
+                    <!-- <div class="hotels">
+                        <p class="hot1"><h3 class="name">La Deli</h3></p>
+                        <p class="hot1"><h3 class="name">La Deli</h3></p>
+                    </div> 
+                 < -->
+                </div>
+                <div class="card">
+                    <div class="fooditem">
+                        <h3>Mexican</h3>
+                    </div><a href="mexican.html">
+                    <img src="https://ontheborder.com.au/wp-content/uploads/2022/03/Mexican-Cuisine-scaled.jpg" alt=""></a>
+                    
+                    <!-- <div class="desc-food">
+                        <p>The Mediterranean diet forms the basis of Italian cuisine, rich in pasta, fish, fruits and vegetables. Cheese, cold cuts and wine are central to Italian cuisine, and along with pizza and coffee (especially espresso) form part of Italian gastronomic culture.</p>
+
+                    </div> -->
+                
+                </div>
+                <div class="card">
+                    <div class="fooditem">
+                        <h3>Indian</h3>
+                    </div><a href="indian.html"> <img src="https://www.tastingtable.com/img/gallery/20-delicious-indian-dishes-you-have-to-try-at-least-once/l-intro-1645057933.jpg" alt=""></a>
+
+                    
+                    <!-- <div class="desc-food">
+                        <p>The Mediterranean diet forms the basis of Italian cuisine, rich in pasta, fish, fruits and vegetables. Cheese, cold cuts and wine are central to Italian cuisine, and along with pizza and coffee (especially espresso) form part of Italian gastronomic culture.</p>
+
+                    </div> -->
+                
+                </div>
+                <div class="card">
+                    <div class="fooditem">
+                        <h3>American</h3>
+                    </div><a href="american2.html">
+                    <img src="https://images.mid-day.com/images/images/2021/jan/americanfood_d.jpg" alt=""></a>
+                    
+                    <!-- <div class="desc-food">
+                        <p>The Mediterranean diet forms the basis of Italian cuisine, rich in pasta, fish, fruits and vegetables. Cheese, cold cuts and wine are central to Italian cuisine, and along with pizza and coffee (especially espresso) form part of Italian gastronomic culture.</p>
+
+                    </div> -->
+                
+                </div>
+                <div class="card">
+                    <div class="fooditem">
+                        <h3>Korean</h3>
+                    </div><a href="korean2.html">
+                    <img src="https://t4.ftcdn.net/jpg/02/66/49/89/360_F_266498992_K4BPAPtC0HSxkLjOStE1tdBJ7cPloyJy.jpg" alt=""></a>
+                    
+                    <!-- <div class="desc-food">
+                        <p>The Mediterranean diet forms the basis of Italian cuisine, rich in pasta, fish, fruits and vegetables. Cheese, cold cuts and wine are central to Italian cuisine, and along with pizza and coffee (especially espresso) form part of Italian gastronomic culture.</p>
+
+                    </div> -->
+                
+                </div>
+                <div class="card">
+                    <div class="fooditem">
+                        <h3>Chinese</h3>
+                    </div><a href="chinese2.html">
+                    <img src="https://www.hotelmousai.com/blog/wp-content/uploads/2021/12/The-10-Most-Popular-Dishes-in-China.jpg" alt=""></a>
+                    
+                    <!-- <div class="desc-food">
+                        <p>The Mediterranean diet forms the basis of Italian cuisine, rich in pasta, fish, fruits and vegetables. Cheese, cold cuts and wine are central to Italian cuisine, and along with pizza and coffee (especially espresso) form part of Italian gastronomic culture.</p>
+
+                    </div> -->
+                
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="fourth"></section><button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Top</button>
+    <script>window.onscroll = function() {
+        toggleScrollToTopButton();
+    };
+    
+    function toggleScrollToTopButton() {
+        var button = document.getElementById("scrollToTopBtn");
+    
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    }
+    
+    function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    }
+    </script>
+</body>
+</html>

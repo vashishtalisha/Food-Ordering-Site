@@ -1,0 +1,221 @@
+.first{
+    /* position: fixed;
+    margin: 0px 0px;
+
+    background-color: aliceblue; */
+}
+
+.navbar{
+    /* background-color: blanchedalmond;*/
+    border-radius: 30px; 
+}
+.navbar ul{
+    overflow:auto;/*coz float karne par parent se overflow ho jaega*/
+}
+.navbar li{
+    float:left;
+    list-style:none;
+    margin:13px 20px;
+    color: aliceblue;
+    
+}
+.navbar li a{
+    text-decoration:none;
+    padding:3px 3px;
+    color:black;
+    font-size: 20px;
+}
+.navbar li a:hover{
+    text-decoration:none;
+    padding:3px 3px;
+    color:rgba(233, 225, 225, 0.912);
+    background-color:black;
+}
+.search{
+    float:right;
+    color:rgb(7, 0, 0);
+    padding:12px 12px;
+    /* height:50px; */
+
+}
+.navbar input{
+    border:2px solid black;
+    border-radius: 14px;
+    padding:7px 9px;
+    width:175px;
+}
+.second{
+    background-image: url(https://img.freepik.com/premium-photo/dark-moody-black-chalkboard-plane-texture-background_629685-1303.jpg);
+    height: 500px;
+}
+.box1{
+    display: inline-block;
+    height:50px;
+    width:60px;
+}
+.heading{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    margin: 50px 635px;
+    color: rgba(246, 241, 241, 0.912);
+}
+.head{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    margin: -39px 602px;
+    color: rgba(240, 236, 236, 0.912);
+
+}
+.para1{
+    text-align: center;
+    margin: auto 400px;
+    color: rgba(241, 233, 233, 0.912);
+    display:inline-block;
+    width:500px;
+    margin:100px 469px;
+
+
+}
+.third{
+    height:500px;
+    /* background-color: rgb(246, 245, 245); */
+    margin:20px 0px 20px 0px;
+}
+.vertical{
+    border-left: 3px solid rgb(169, 167, 167);
+    position:absolute;
+    height: 400px;
+    left:46%;
+    margin: 50px;
+    
+}
+.fourth{
+    height:500px;
+    /* background-image: url(https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg); */
+    /* background: url(https://www.shutterstock.com/video/clip-1086192224-super-slow-motion-shot-wok-pan-flying);
+    background-size: cover;
+} */
+}
+.formm{
+    display: inline-block;
+    margin:8px 88px ;
+    padding:112px;
+    color:rgba(58, 23, 23, 0.912);
+    float:right;
+}
+.label{
+    margin:-18px;
+    padding:16px;
+}
+.btn{
+    border-radius:20px;
+    margin:15px;
+    padding:7px;
+    width:180px;
+}
+#name , #email , #message{
+    margin: 7px;
+    /* padding:20px; */
+    border-radius:7px;
+}
+.btn:hover{
+    background-color: blanchedalmond;
+    color:rgba(58, 23, 23, 0.912);
+}
+.infoo{
+    margin:30px;
+    padding:56px;
+    /* width:20px;
+    height:100px; */
+    
+}
+.para2{
+    color:rgba(58, 23, 23, 0.912);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 18px;
+}
+img{
+    height:500px;
+    width:1440px;
+}
+.fourth{
+    margin-bottom: 60px;
+}
+.footer{
+    background-color: blanchedalmond;
+    padding:70px 0;
+}
+.container{
+    /* max-width:1170px; */
+    margin:auto;
+    background-color: white;
+}
+ul{
+    list-style: none;
+}
+.row{
+    display:flex;
+    flex-wrap:wrap;
+}
+.footer-col{
+    width:25%;
+    padding:0 15px;
+}
+.footer-col h4{
+    font-size: 18px;
+    color: black;
+    text-transform:capitalize;
+    margin-bottom: 35px;
+    position: relative;
+    
+
+}
+.footer-col h4::before{
+    content:'';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    /* background-color: #e91e63; */
+    box-sizing: border-box;
+    width:50px;
+    height: 2px;
+}
+.footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+}
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    columns: grey;
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease ;
+}
+.footer-col ul li a:hover{
+    color:black;
+    padding-left: 8px;
+
+}
+.footer-col .social-links a{
+    display:inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: black;
+    color: white;
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+
+}
+.footer-col .social-links a:hover{
+    height: 60px;
+    width: 60px;
+    background-color: grey;
+}
+
+

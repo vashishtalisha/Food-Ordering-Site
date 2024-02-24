@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Listing</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #495057;
+            transition: background-color 0.5s ease;
+        }
+
+        body.dark-mode {
+            background-color: #343a40;
+            color: white;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+
+        .restaurant-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .restaurant-card {
+            width: 300px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .restaurant-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .restaurant-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .restaurant-info {
+            padding: 15px;
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #343a40;
+        }
+
+        p {
+            margin: 0;
+            color: #6c757d;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            position: relative;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #slideshow-container {
+            max-width: 500px;
+            /* Adjust the max-width as needed */
+            margin: auto;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .mySlides img {
+            width: 500px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .dark-mode-toggle {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background-color: #343a40;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Discover Delicious Restaurants</h1>
+        <p>Explore a variety of cuisines in your city</p>
+        <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+        <nav>
+            <ul>
+                <li><a href="ordering.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <div class="restaurant-container">
+        <!-- Restaurant 1 -->
+        <div class="restaurant-card" onclick="openModal('modal1')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_2MFG30NrKl-rHuJSXzPPu1-1W9r8ljzNA&usqp=CAU"
+                alt="Restaurant 1" class="restaurant-image">
+            <div class="restaurant-info">
+                <h2>SAVOIR</h2>
+                <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
+                <p>Location: Rajpura, India</p>
+                <a href="javascript:void(0);" onclick="openModal('modal1')"
+                    style="color: #007bff; text-decoration: none;">View Menu</a>
+            </div>
+        </div>
+        <div class="restaurant-card" onclick="openModal('modal2')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ6Z-yJTcHShe0OllW7o0UjfZmmQMle9t26usppHqWKP8M52XU3N94IFgibRMNgsgTSNA&usqp=CAU"
+                alt="Restaurant 1" class="restaurant-image">
+            <div class="restaurant-info">
+                <h2>DELICACIES</h2>
+                <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
+                <p>Location: Rajpura, India</p>
+                <a href="javascript:void(0);" onclick="openModal('modal2')"
+                    style="color: #007bff; text-decoration: none;">View Menu</a>
+            </div>
+        </div>
+
+        <!-- Restaurant 2 -->
+        <div class="restaurant-card" onclick="openModal('modal3')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAHdYuFPGgfBr5KneMTGwoYtrQGFl_L0qwkg&usqp=CAU"
+                alt="Restaurant 2" class="restaurant-image">
+            <div class="restaurant-info">
+                <h2>CHEF'S KISS Restaurant</h2>
+                <p>Where every ingredient tells a story.
+                    Where Every Dish is a Journey
+                    Taste the Extraordinary</p>
+                <p>Location: Rajpura, India</p>
+                <a href="javascript:void(0);" onclick="openModal('modal3')"
+                    style="color: #007bff; text-decoration: none;">View Menu</a>
+            </div>
+        </div>
+        <div class="restaurant-card" onclick="openModal('modal4')">
+            <img src="
+        https://lebua.com/wp-content/uploads/2019/04/44-Breeze-Angle-2-1-scaled.jpg" alt="Restaurant 2"
+                class="restaurant-image">
+            <div class="restaurant-info">
+                <h2>HIND BHOJANALAYA</h2>
+                <p>Experience the Magic of Dining
+                    Where your food dreams come true.
+                    The Good Food Experience. </p>
+                <p>Location: Rajpura, India</p>
+                <a href="javascript:void(0);" onclick="openModal('modal4')"
+                    style="color: #007bff; text-decoration: none;">View Menu</a>
+            </div>
+        </div>
+        <div class="restaurant-card" onclick="openModal('modal5')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSie8-BzMLmEqsmGgfCvbHlNomDq046DbtZkQ&usqp=CAU"
+                alt="Restaurant 1" class="restaurant-image">
+            <div class="restaurant-info">
+                <h2>RAJPURA REVERIES</h2>
+                <p>Culinary Delights, Crafted with Passion
+                    Experience the Symphony of Flavors</p>
+                <p>Location: Rajpura, India</p>
+                <a href="javascript:void(0);" onclick="openModal('modal5')"
+                    style="color: #007bff; text-decoration: none;">View Menu</a>
+            </div>
+        </div>
+
+        <!-- Restaurant 2 -->
+        <div class="restaurant-card" onclick="openModal('modal6')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWrBK-EJkjLJ5o1J3y2LTO8gWpkPfbj_lzvw&usqp=CAU"
+                alt="Restaurant 2" class="restaurant-image">
+            <div class="restaurant-info">
+                <h2>PUNJABI DHABA</h2>
+                <p>Where every ingredient tells a story.
+                    Where Every Dish is a Journey
+                    Taste the Extraordinary
+                </p>
+                <p>Location: Rajpura, India</p>
+                <a href="javascript:void(0);" onclick="openModal('modal6')"
+                    style="color: #007bff; text-decoration: none;">View Menu</a>
+            </div>
+        </div>
+        <div class="restaurant-card" onclick="openModal('modal7')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZW1YeR9uLI4RF2eaN2znqjsu7MoHhrufvuw&usqp=CAU"
+                alt="Restaurant 1" class="restaurant-image">
+            <div class="restaurant-info">
+                <h2>ANIL JI'S</h2>
+                <p>Experience the Magic of Dining
+                    Where your food dreams come true.
+                    The Good Food Experience.</p>
+                <p>Location: Rajpura, India</p>
+                <a href="javascript:void(0);" onclick="openModal('modal7')"
+                    style="color: #007bff; text-decoration: none;">View Menu</a>
+            </div>
+        </div>
+
+        <!-- Restaurant 2 -->
+        <div class="restaurant-card" onclick="openModal('modal8')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgruQgyVHQ5M6nFghaMdNqZdqDAYMNBswqAg&usqp=CAU"
+                alt="Restaurant 2" class="restaurant-image">
+            <div class="restaurant-info">
+                <h2>BREW STREET</h2>
+                <p>Culinary Delights, Crafted with Passion
+                    Experience the Symphony of Flavors</p>
+                <p>Location: Rajpura, India</p>
+                <a href="javascript:void(0);" onclick="openModal('modal8')"
+                    style="color: #007bff; text-decoration: none;">View Menu</a>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal1')">&times;</span>
+            <h1>SAVOIR</h1>
+            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
+            <ul>
+                <li><a href="american2.html">American</a></li>
+                <li><a href="indian.html">Indian</a></li>
+                <li><a href="italian2.html">Italian</a></li>
+                <li><a href="mexican.html">Mexican</a></li>
+                <li><a href="korean2.html">Korean</a></li>
+                <li><a href="chinese2.html">Chinese</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal2')">&times;</span>
+            <h2>DELICAIES</h2>
+            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
+            <ul>
+                <li><a href="american2.html">American</a></li>
+                <li><a href="indian.html">Indian</a></li>
+                <li><a href="italian2.html">Italian</a></li>
+                <li><a href="mexican.html">Mexican</a></li>
+                <li><a href="korean2.html">Korean</a></li>
+                <li><a href="chinese2.html">Chinese</a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="modal3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal3')">&times;</span>
+            <h2>CHEF'S KISS</h2>
+            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
+            <ul>
+                <li><a href="american2.html">American</a></li>
+                <li><a href="indian.html">Indian</a></li>
+                <li><a href="italian2.html">Italian</a></li>
+                <li><a href="mexican.html">Mexican</a></li>
+                <li><a href="korean2.html">Korean</a></li>
+                <li><a href="chinese2.html">Chinese</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal4" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal4')">&times;</span>
+            <h2>HIND BHOJANALAYA</h2>
+            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines..</p>
+            <ul>
+                <li><a href="american2.html">American</a></li>
+                <li><a href="indian.html">Indian</a></li>
+                <li><a href="italian2.html">Italian</a></li>
+                <li><a href="mexican.html">Mexican</a></li>
+                <li><a href="korean2.html">Korean</a></li>
+                <li><a href="chinese2.html">Chinese</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal5" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2>RAJPURA REVERIES</h2>
+            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
+            <ul>
+                <li><a href="american2.html">American</a></li>
+                <li><a href="indian.html">Indian</a></li>
+                <li><a href="italian2.html">Italian</a></li>
+                <li><a href="mexican.html">Mexican</a></li>
+                <li><a href="korean2.html">Korean</a></li>
+                <li><a href="chinese2.html">Chinese</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal6" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal6')">&times;</span>
+            <h2>PUNJABI DHABA</h2>
+            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
+            <ul>
+                <li><a href="american2.html">American</a></li>
+                <li><a href="indian.html">Indian</a></li>
+                <li><a href="italian2.html">Italian</a></li>
+                <li><a href="mexican.html">Mexican</a></li>
+                <li><a href="korean2.html">Korean</a></li>
+                <li><a href="chinese2.html">Chinese</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="modal7" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal7')">&times;</span>
+            <h2>ANIL JI'S</h2>
+            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
+            <ul>
+                <li><a href="american2.html">American</a></li>
+                <li><a href="indian.html">Indian</a></li>
+                <li><a href="italian2.html">Italian</a></li>
+                <li><a href="mexican.html">Mexican</a></li>
+                <li><a href="korean2.html">Korean</a></li>
+                <li><a href="chinese2.html">Chinese</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal8" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('modal8')">&times;</span>
+            <h2>BREW STREET</h2>
+            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
+            <ul>
+                <li><a href="american2.html">American</a></li>
+                <li><a href="indian.html">Indian</a></li>
+                <li><a href="italian2.html">Italian</a></li>
+                <li><a href="mexican.html">Mexican</a></li>
+                <li><a href="korean2.html">Korean</a></li>
+                <li><a href="chinese2.html">Chinese</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+    <footer>
+        &copy; 2023 FOOODIES!😎 
+
+        <!-- Image Slideshow -->
+        <div id="slideshow-container">
+            <div class="mySlides fade">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnvxTZPttSJBl6_W_EHBzVmcO7b75FGQ_Fag&usqp=CAU"
+                    style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDjyLHoGxcLf2BNeTloVGSkAv6IiTRAncWbg&usqp=CAU"
+                    style="width:100%">
+            </div>
+
+            <div class="mySlides fade">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDpnJNuYjzj6j7L-vBmgnPelTVy_9989SZkQ&usqp=CAU"
+                    style="width:100%">
+            </div>
+        </div>
+        <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Top</button>
+
+        <script>
+            function openModal(modalId) {
+                var modal = document.getElementById(modalId);
+                modal.style.display = "block";
+            }
+
+            function closeModal(modalId) {
+                var modal = document.getElementById(modalId);
+                modal.style.display = "none";
+            }
+
+            // Close the modal if the user clicks outside of it
+            window.onclick = function (event) {
+                if (event.target.classList.contains('modal')) {
+                    event.target.style.display = "none";
+                }
+            };
+            window.onscroll = function () {
+                toggleScrollToTopButton();
+            };
+
+            function toggleScrollToTopButton() {
+                var button = document.getElementById("scrollToTopBtn");
+
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = "block";
+                } else {
+                    button.style.display = "none";
+                }
+            }
+
+            function scrollToTop() {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+            }
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1;
+                }
+                slides[slideIndex - 1].style.display = "block";
+                setTimeout(showSlides, 2000); // Change slide every 2 seconds
+            }
+            const body = document.body;
+            const darkModeToggle = document.createElement('button');
+            darkModeToggle.textContent = 'Toggle Dark Mode';
+            darkModeToggle.addEventListener('click', toggleDarkMode);
+            document.body.appendChild(darkModeToggle);
+
+            function toggleDarkMode() {
+                body.classList.toggle('dark-mode');
+            }
+
+        </script>
+
+
+
+</body>
+
+</html>
