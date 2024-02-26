@@ -47,6 +47,13 @@
     /* height:50px; */
 
 }
+.order{
+    width: 100px;
+
+}
+a{
+    width: 100px;
+}
 .navbar input{
     border:2px solid black;
     border-radius: 14px;
@@ -76,41 +83,44 @@ body{
     text-align: center;
 
 }
+
+
 .btn{
-            background-color: black;
-            border: 2px solid blanchedalmond;
-            color:blanchedalmond;
-            padding: 5px 10px;
-            text-align: center;
-            display: inline-block;
-            font-size: 20px;
-            margin: 80px 30px 100px 638px;
-            cursor: pointer;
-            border-radius: 10px;
-        }
-        .btn:hover{
-            background-color: blanchedalmond;
-            color:black;
-        }
-        .btn2{
-            background-color: black;
-            border: 2px solid blanchedalmond;
-            color:blanchedalmond;
-            padding: 5px 10px;
-            text-align: center;
-            /* display: inline-block; */
-            font-size: 20px;
-            /* margin: 80px 30px 100px 638px; */
-            cursor: pointer;
-            border-radius: 10px;
-        }
-        .btn2:hover{
-            background-color: blanchedalmond;
-            color:black;
-        }
-        li{
-            list-style:none;
-        }
+background-color: black;
+border: 2px solid blanchedalmond;
+color:blanchedalmond;
+margin-top: 50px;
+margin-bottom: 50px;
+padding: 5px 10px;
+text-align: center;
+display: inline-block;
+font-size: 20px;
+cursor: pointer;
+border-radius: 10px;
+}
+.btn:hover{
+    background-color: blanchedalmond;
+    color:black;
+}
+.btn2{
+    background-color: black;
+    border: 2px solid blanchedalmond;
+    color:blanchedalmond;
+    padding: 5px 10px;
+    text-align: center;
+    /* display: inline-block; */
+    font-size: 20px;
+    /* margin: 80px 30px 100px 638px; */
+    cursor: pointer;
+    border-radius: 10px;
+ }
+.btn2:hover{
+    background-color: blanchedalmond;
+    color:black;
+}
+li{
+    list-style:none;
+}
 
 .main{
     
