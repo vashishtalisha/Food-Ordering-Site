@@ -1,0 +1,5 @@
+It's a collaborative collage project under CONSTRUCTUON.
+DON'T COPY THIS FOR YOUR OWN SAKE 
+OTHERWISE THE DARKNESS WITH BESTOW UPON YOU
+AND.............
+IT'LL BE BAD.... VERY BAD 😈
