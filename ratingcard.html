@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>FOODIES rating</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Raleway");
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #001a68;
+}
+
+.container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fbRatingCard {
+  display: flex;
+  padding: 0.625rem 1.875rem 3.125rem;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+.fbRatingCard .cardContainer {
+  position: relative;
+  padding: 12.5rem 2.5rem 1.25rem;
+}
+.fbRatingCard .cardContainer .icon {
+  height: 6.25rem;
+  width: 6.25rem;
+  position: absolute;
+  top: 1.25rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  margin-bottom: 2.5rem;
+  background-image: url("reactions.png");
+  background-size: 46.25rem;
+  background-repeat: no-repeat;
+  border-radius: 500px;
+  transition: all ease 0.2s;
+  border: 0.625rem solid #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+.fbRatingCard .cardContainer .icon::after {
+  content: "Rate Us";
+  position: absolute;
+  bottom: -2.8125rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #212121;
+}
+.fbRatingCard .cardContainer input[type=radio] {
+  display: none;
+}
+.fbRatingCard .cardContainer input[type=radio] + label {
+  display: inline-flex;
+  height: 1.25rem;
+  width: 1.25rem;
+  margin: 0 0.625rem;
+  border-radius: 500px;
+  background-color: #212121;
+  position: relative;
+}
+.fbRatingCard .cardContainer input[type=radio] + label:hover {
+  cursor: pointer;
+}
+.fbRatingCard .cardContainer input[type=radio] + label::after {
+  content: "";
+  position: absolute;
+  height: 0.625rem;
+  width: 0.625rem;
+  background-color: #fcda6a;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 500px;
+  transform: scale(0);
+  transition: all ease 0.2s;
+}
+.fbRatingCard .cardContainer input[type=radio]#like:checked + label::after {
+  transform: scale(1);
+}
+.fbRatingCard .cardContainer input[type=radio]#like:checked ~ .icon {
+  background-position: 0rem 0;
+}
+.fbRatingCard .cardContainer input[type=radio]#like:checked ~ .icon::after {
+  content: "like";
+}
+.fbRatingCard .cardContainer input[type=radio]#love:checked + label::after {
+  transform: scale(1);
+}
+.fbRatingCard .cardContainer input[type=radio]#love:checked ~ .icon {
+  background-position: -8rem 0;
+}
+.fbRatingCard .cardContainer input[type=radio]#love:checked ~ .icon::after {
+  content: "love";
+}
+.fbRatingCard .cardContainer input[type=radio]#haha:checked + label::after {
+  transform: scale(1);
+}
+.fbRatingCard .cardContainer input[type=radio]#haha:checked ~ .icon {
+  background-position: -16rem 0;
+}
+.fbRatingCard .cardContainer input[type=radio]#haha:checked ~ .icon::after {
+  content: "haha";
+}
+.fbRatingCard .cardContainer input[type=radio]#wow:checked + label::after {
+  transform: scale(1);
+}
+.fbRatingCard .cardContainer input[type=radio]#wow:checked ~ .icon {
+  background-position: -24rem 0;
+}
+.fbRatingCard .cardContainer input[type=radio]#wow:checked ~ .icon::after {
+  content: "wow";
+}
+.fbRatingCard .cardContainer input[type=radio]#sad:checked + label::after {
+  transform: scale(1);
+}
+.fbRatingCard .cardContainer input[type=radio]#sad:checked ~ .icon {
+  background-position: -32rem 0;
+}
+.fbRatingCard .cardContainer input[type=radio]#sad:checked ~ .icon::after {
+  content: "sad";
+}
+.fbRatingCard .cardContainer input[type=radio]#angry:checked + label::after {
+  transform: scale(1);
+}
+.fbRatingCard .cardContainer input[type=radio]#angry:checked ~ .icon {
+  background-position: -40rem 0;
+}
+.fbRatingCard .cardContainer input[type=radio]#angry:checked ~ .icon::after {
+  content: "angry";
+}
+.fbRatingCard .submit-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -2.1875rem;
+  margin: auto;
+  padding: 0.625rem 2.5rem;
+  display: inline-flex;
+  border-radius: 0.25rem;
+  border: none;
+  background-color: #212121;
+  color: #fcda6a;
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+}
+.fbRatingCard .submit-btn:hover {
+  background-color: #3b3b3b;
+  cursor: pointer;
+}
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="fbRatingCard">
+    <form action="#">
+      <div class="cardContainer">
+        <input type="radio" id="like" name="rating" checked>
+        <label for="like"></label>
+        <input type="radio" id="love" name="rating">
+        <label for="love"></label>
+        <input type="radio" id="haha" name="rating">
+        <label for="haha"></label>
+        <input type="radio" id="wow" name="rating">
+        <label for="wow"></label>
+        <input type="radio" id="sad" name="rating">
+        <label for="sad"></label>
+        <input type="radio" id="angry" name="rating">
+        <label for="angry"></label>
+        <div class="icon">
+
+        </div>
+        <button class="submit-btn" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
