@@ -271,8 +271,82 @@ footer {
   width: 150px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
   margin-right: 10px; /* Add margin at the right for spacing */
-  margin-left: 10px; 
+  margin-left: 100px; 
 }
+.divider {
+            border-top: 10px solid #000000; /* Adjust thickness and color as needed */
+            margin: 20px 0; /* Adjust margin as needed */
+        }
+#team{
+    margin-top: -100%;
+}
+  
+  .section-heading {
+    font-family: "Dancing Script", cursive;
+    text-align: center;
+    font-size: 5rem;
+    color: #0d7f5b;
+    margin: 0 0 70px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .profile {
+    position: relative;
+    transition: all 0.3s;
+  }
+  
+  .profile:hover {
+    transform: translateY(25px);
+  }
+  
+  .profile img {
+    border-radius: 50%;
+    border: 5px solid #09ac00;
+    filter: drop-shadow(-20px 0 10px rgba(0, 0, 0, 0.1));
+    cursor:crosshair;
+    height:200px;
+    width: 170px;
+    
+  }
+
+  .profile .name {
+    position: absolute;
+    background-color: #0d7f5b;
+    color: #fff;
+    font-family: "Bebas Neue", cursive;
+    padding: 15px 30px;
+    border-radius: 100px;
+    bottom: -80px; left: 50%;
+    white-space: nowrap;
+    transform: translate(-50%, -50px);
+    letter-spacing: 1px;
+    font-size: 20px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  
+  .profile .name::before {
+    content: "";
+    position: absolute;
+    width: 15px; height: 15px;
+    background-color: #10996d;
+    top: 0; left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .profile img:hover + .name {
+    opacity: 1;
+    transform: translateX(-50%);
+    box-shadow: 0 10px 20px rgba(86, 86, 198, 0.3);
+  }
+
     </style>
 </head>
 <body>
@@ -313,11 +387,21 @@ footer {
                 <span>ON ALL ORDERS !!! 😄</span>
             </div>
     </section>
+    <div class="divider"></div>
+    <section
+        class="team">
+    <h1 class="section-heading">Our😎Team</h1>
+    <div class="container">
+      <!-- <div class="profile">
+          <img src="path" alt=""/><span class="name">name</span>
+        </div> -->
+    </section>
             <div class="footer_container">
                 <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
                   <div class="col mb-3">
-                    <img src="logowhite.png" alt="Footer Logo">
-                      
+                    <img src="C:\Users\Amrit Joshi\OneDrive\Desktop\Tech\Food-Ordering-Site-main\logowhite.png" alt="Footer Logo">
+                      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                    </a>
                     <p class="text-body-secondary">© 2024 FOOODIES.pvt.ltd</p>
                   </div>
               
@@ -339,11 +423,10 @@ footer {
                   <div class="col mb-3">
                     <h5>Contacts</h5>
                     <ul class="nav flex-column">
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Alisha</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Amrit</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ananaya</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Eknoor</a></li>
                     </ul>
                   </div>
               
@@ -373,5 +456,44 @@ footer {
                   </div>
                 </footer>
               </div>
+              <script>
+                function createCard(img, name) {
+  let html = `<div class="profile">
+    <img src="${img}" alt=""/><span class="name">${name}</span>
+  </div>`;
+  document.querySelector(".container").innerHTML =
+    document.querySelector(".container").innerHTML + html;
+}
+let data = [
+{
+    url: "alisha.jpeg",
+    name: "Alisha Vashishth(LEADER)",
+  },  
+{
+    url: "Amrit.jpeg",
+    name: "Amrit Joshi(COMMANDER)",
+  },
+  {
+    url: "ananaya.jpeg",
+    name: "Ananaya Sharma(WARRIOR)",
+  },
+  {
+    url: "ikky.jpeg",
+    name: "Eknoor Singh(GUARD)",
+  },
+
+];
+
+data.forEach(function (obj) {
+  let Url = obj.url;
+  let Name = obj.name;
+  /* console.log(Url);
+     console.log(Name); */
+
+  createCard(Url, Name);
+});
+
+
+              </script>
 </body>
 </html>
