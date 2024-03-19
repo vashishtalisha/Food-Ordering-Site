@@ -41,6 +41,7 @@ html{
 section{
     padding:10rem 9%;
 }
+
 .heading{
     text-align: center;
     font-size: 4rem;
@@ -82,13 +83,24 @@ header .logo{
     color:rgb(0, 0, 0);
     font-weight: bolder;
 }
+.logo {
+            font-size: 2rem;
+            color: #000;
+            font-weight: bolder;
+        }
 header .logo span{
     color:var(--green);
 }
+.navbar {
+            display: flex;
+            align-items: center;
+        }
 header .navbar a{
     font-size: 2rem;
     padding:0 1.5rem;
     color:rgb(0, 0, 0);
+    margin-left: 2rem;
+    text-decoration: none;
 }
 header .navbar a:hover{
     color:var(--green);
@@ -279,6 +291,8 @@ footer {
         }
 #team{
     margin-top: -100%;
+    display: flex;
+    justify-content: center;
 }
   
   .section-heading {
@@ -300,6 +314,7 @@ footer {
   .profile {
     position: relative;
     transition: all 0.3s;
+    display: flex;
   }
   
   .profile:hover {
@@ -391,15 +406,12 @@ footer {
     <section
         class="team">
     <h1 class="section-heading">Our😎Team</h1>
-    <div class="container">
-      <!-- <div class="profile">
-          <img src="path" alt=""/><span class="name">name</span>
-        </div> -->
+  
     </section>
             <div class="footer_container">
                 <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
                   <div class="col mb-3">
-                    <img src="C:\Users\Amrit Joshi\OneDrive\Desktop\Tech\Food-Ordering-Site-main\logowhite.png" alt="Footer Logo">
+                    <img src="logowhite.png" alt="Footer Logo">
                       <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
                     </a>
                     <p class="text-body-secondary">© 2024 FOOODIES.pvt.ltd</p>
@@ -412,21 +424,17 @@ footer {
                   <div class="col mb-3">
                     <h5>Address</h5>
                     <ul class="nav flex-column">
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"></a></li>
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> CHITKARA UNIVERSITY<br><br>Chandigarh-Patiala National Highway<br> (NH- 64 Village Jansla, Rajpura,<br> Punjab 140401</a></li>
                     </ul>
                   </div>
               
                   <div class="col mb-3">
                     <h5>Contacts</h5>
                     <ul class="nav flex-column">
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Alisha</a></li>
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Amrit</a></li>
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ananaya</a></li>
-                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Eknoor</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Alisha +91 8570893065 </a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Amrit +91 9501580144</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ananaya +91 7696900089</a></li>
+                      <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Eknoor +91 9877668864 </a></li>
                     </ul>
                   </div>
               
@@ -479,7 +487,7 @@ let data = [
   },
   {
     url: "ikky.jpeg",
-    name: "Eknoor Singh(GUARD)",
+    name: "Eknoor Singh(GURADIAN)",
   },
 
 ];
