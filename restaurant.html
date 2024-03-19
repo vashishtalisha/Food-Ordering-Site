@@ -179,6 +179,73 @@
             padding: 5px 10px;
             font-size: 14px;
         }
+        /* Add this CSS at the end of your existing CSS */
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .restaurant-card {
+        width: calc(50% - 40px); /* Adjust based on the desired number of columns */
+    }
+
+    .restaurant-info {
+        padding: 10px;
+    }
+
+    .restaurant-image {
+        height: 200px; /* Adjust the height of restaurant images */
+    }
+
+    .mySlides img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .restaurant-card {
+        width: 100%; /* Display cards in a single column */
+        margin: 10px 0;
+    }
+
+    .restaurant-info {
+        padding: 10px;
+    }
+
+    .restaurant-image {
+        height: 150px; /* Adjust the height of restaurant images */
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    nav ul {
+        padding: 0;
+    }
+}
+
     </style>
 </head>
 
@@ -209,7 +276,7 @@
                 <h2>SAVOIR</h2>
                 <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
                 <p>Location: Rajpura, India</p>
-                <a href="javascript:void(0);" onclick="openModal('modal1')"
+                <a href="menu1.html"
                     style="color: #007bff; text-decoration: none;">View Menu</a>
             </div>
         </div>
@@ -220,7 +287,7 @@
                 <h2>DELICACIES</h2>
                 <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
                 <p>Location: Rajpura, India</p>
-                <a href="javascript:void(0);" onclick="openModal('modal2')"
+                <a href="menu1.html"
                     style="color: #007bff; text-decoration: none;">View Menu</a>
             </div>
         </div>
@@ -235,7 +302,7 @@
                     Where Every Dish is a Journey
                     Taste the Extraordinary</p>
                 <p>Location: Rajpura, India</p>
-                <a href="javascript:void(0);" onclick="openModal('modal3')"
+                <a href="menu1.html"
                     style="color: #007bff; text-decoration: none;">View Menu</a>
             </div>
         </div>
@@ -249,7 +316,7 @@
                     Where your food dreams come true.
                     The Good Food Experience. </p>
                 <p>Location: Rajpura, India</p>
-                <a href="javascript:void(0);" onclick="openModal('modal4')"
+                <a href="menu1.html"
                     style="color: #007bff; text-decoration: none;">View Menu</a>
             </div>
         </div>
@@ -261,7 +328,7 @@
                 <p>Culinary Delights, Crafted with Passion
                     Experience the Symphony of Flavors</p>
                 <p>Location: Rajpura, India</p>
-                <a href="javascript:void(0);" onclick="openModal('modal5')"
+                <a href="menu1.html"
                     style="color: #007bff; text-decoration: none;">View Menu</a>
             </div>
         </div>
@@ -277,7 +344,7 @@
                     Taste the Extraordinary
                 </p>
                 <p>Location: Rajpura, India</p>
-                <a href="javascript:void(0);" onclick="openModal('modal6')"
+                <a href="menu1.html"
                     style="color: #007bff; text-decoration: none;">View Menu</a>
             </div>
         </div>
@@ -290,7 +357,7 @@
                     Where your food dreams come true.
                     The Good Food Experience.</p>
                 <p>Location: Rajpura, India</p>
-                <a href="javascript:void(0);" onclick="openModal('modal7')"
+                <a href="menu1.html"
                     style="color: #007bff; text-decoration: none;">View Menu</a>
             </div>
         </div>
@@ -304,7 +371,7 @@
                 <p>Culinary Delights, Crafted with Passion
                     Experience the Symphony of Flavors</p>
                 <p>Location: Rajpura, India</p>
-                <a href="javascript:void(0);" onclick="openModal('modal8')"
+                <a href="menu1.html"
                     style="color: #007bff; text-decoration: none;">View Menu</a>
             </div>
         </div>
@@ -313,132 +380,7 @@
     </div>
 
     <!-- Modals -->
-    <div id="modal1" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal1')">&times;</span>
-            <h1>SAVOIR</h1>
-            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
-            <ul>
-                <li><a href="american2.html">American</a></li>
-                <li><a href="indian.html">Indian</a></li>
-                <li><a href="italian2.html">Italian</a></li>
-                <li><a href="mexican.html">Mexican</a></li>
-                <li><a href="korean2.html">Korean</a></li>
-                <li><a href="chinese2.html">Chinese</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="modal2" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal2')">&times;</span>
-            <h2>DELICAIES</h2>
-            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
-            <ul>
-                <li><a href="american2.html">American</a></li>
-                <li><a href="indian.html">Indian</a></li>
-                <li><a href="italian2.html">Italian</a></li>
-                <li><a href="mexican.html">Mexican</a></li>
-                <li><a href="korean2.html">Korean</a></li>
-                <li><a href="chinese2.html">Chinese</a></li>
-
-            </ul>
-        </div>
-    </div>
-    <div id="modal3" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal3')">&times;</span>
-            <h2>CHEF'S KISS</h2>
-            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
-            <ul>
-                <li><a href="american2.html">American</a></li>
-                <li><a href="indian.html">Indian</a></li>
-                <li><a href="italian2.html">Italian</a></li>
-                <li><a href="mexican.html">Mexican</a></li>
-                <li><a href="korean2.html">Korean</a></li>
-                <li><a href="chinese2.html">Chinese</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="modal4" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal4')">&times;</span>
-            <h2>HIND BHOJANALAYA</h2>
-            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines..</p>
-            <ul>
-                <li><a href="american2.html">American</a></li>
-                <li><a href="indian.html">Indian</a></li>
-                <li><a href="italian2.html">Italian</a></li>
-                <li><a href="mexican.html">Mexican</a></li>
-                <li><a href="korean2.html">Korean</a></li>
-                <li><a href="chinese2.html">Chinese</a></li>
-            </ul>
-        </div>
-    </div>
-    <div id="modal5" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal5')">&times;</span>
-            <h2>RAJPURA REVERIES</h2>
-            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
-            <ul>
-                <li><a href="american2.html">American</a></li>
-                <li><a href="indian.html">Indian</a></li>
-                <li><a href="italian2.html">Italian</a></li>
-                <li><a href="mexican.html">Mexican</a></li>
-                <li><a href="korean2.html">Korean</a></li>
-                <li><a href="chinese2.html">Chinese</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="modal6" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal6')">&times;</span>
-            <h2>PUNJABI DHABA</h2>
-            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
-            <ul>
-                <li><a href="american2.html">American</a></li>
-                <li><a href="indian.html">Indian</a></li>
-                <li><a href="italian2.html">Italian</a></li>
-                <li><a href="mexican.html">Mexican</a></li>
-                <li><a href="korean2.html">Korean</a></li>
-                <li><a href="chinese2.html">Chinese</a></li>
-            </ul>
-        </div>
-    </div>
-    <div id="modal7" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal7')">&times;</span>
-            <h2>ANIL JI'S</h2>
-            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
-            <ul>
-                <li><a href="american2.html">American</a></li>
-                <li><a href="indian.html">Indian</a></li>
-                <li><a href="italian2.html">Italian</a></li>
-                <li><a href="mexican.html">Mexican</a></li>
-                <li><a href="korean2.html">Korean</a></li>
-                <li><a href="chinese2.html">Chinese</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <div id="modal8" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal('modal8')">&times;</span>
-            <h2>BREW STREET</h2>
-            <p>The best dishes could be found here. Try our menu which offers a variety of cuisines.</p>
-            <ul>
-                <li><a href="american2.html">American</a></li>
-                <li><a href="indian.html">Indian</a></li>
-                <li><a href="italian2.html">Italian</a></li>
-                <li><a href="mexican.html">Mexican</a></li>
-                <li><a href="korean2.html">Korean</a></li>
-                <li><a href="chinese2.html">Chinese</a></li>
-            </ul>
-        </div>
-    </div>
-    </div>
+    
 
     <footer>
         &copy; 2023 FOOODIES!😎 
@@ -463,25 +405,6 @@
         <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Top</button>
 
         <script>
-            function openModal(modalId) {
-                var modal = document.getElementById(modalId);
-                modal.style.display = "block";
-            }
-
-            function closeModal(modalId) {
-                var modal = document.getElementById(modalId);
-                modal.style.display = "none";
-            }
-
-            // Close the modal if the user clicks outside of it
-            window.onclick = function (event) {
-                if (event.target.classList.contains('modal')) {
-                    event.target.style.display = "none";
-                }
-            };
-            window.onscroll = function () {
-                toggleScrollToTopButton();
-            };
 
             function toggleScrollToTopButton() {
                 var button = document.getElementById("scrollToTopBtn");
