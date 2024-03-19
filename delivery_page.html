@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dekivery Page</title>
 </head>
 <style>
 .navbar{
-    margin:-8px -8px -8px -8px;
+    margin:0px -8px -8px -8px;
     background-color: rgba(33, 31, 31, 0.74);
     position: fixed;
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px 20px 20px 20px;
     width: 100%;
 }
 .navbar ul img{
@@ -43,6 +41,8 @@
     background-size: auto;
     background-repeat: repeat-x;
     height: 1000px;
+    width: auto;
+    padding-top:200px ;
     margin: -10px -10px -10px -10px;
 }
 .footer_container {
@@ -139,6 +139,169 @@ footer {
   margin-right: 10px; 
   margin-left: 10px; 
 }
+.content{
+    width: 80rem; /* Can be in percentage also. */
+    height: 50rem;
+    margin: 0 auto auto;
+    position: relative;
+background: rgba(216, 111, 109, 0.31);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(3.5px);
+-webkit-backdrop-filter: blur(3.5px);
+border: 1px solid rgba(181, 71, 69, 0.37);
+}
+.form {
+  background: #0c0f14;
+  box-shadow: 0px 187px 75px rgba(0, 0, 0, 0.01),
+    0px 105px 63px rgba(0, 0, 0, 0.05), 0px 47px 47px rgba(0, 0, 0, 0.09),
+    0px 12px 26px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  width: 45rem; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 10rem 20rem 10rem 15rem;
+  padding: 20px;
+  position: relative;
+  border-radius: 25px;
+}
+.form .label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.form .label:has(input:focus) .title {
+  top: 0;
+  left: 0;
+  color: #d17842;
+}
+.form .label .title {
+  padding: 0 10px;
+  transition: all 300ms;
+  font-size: 12px;
+  color: #8b8e98;
+  font-weight: 600;
+  width: -moz-fit-content;
+  width: fit-content;
+  top: 14px;
+  position: relative;
+  left: 15px;
+  background: #0c0f14;
+}
+.form .input-field {
+  width: auto;
+  height: 50px;
+  text-indent: 15px;
+  border-radius: 15px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid #21262e;
+  transition: all 0.3s;
+  caret-color: #d17842;
+  color: #aeaeae;
+}
+
+.form .input-field:hover {
+  border-color: rgba(209, 121, 66, 0.5);
+}
+
+.form .input-field:focus {
+  border-color: #d17842;
+}
+.form .split {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 15px;
+}
+.form .split label {
+  width: 130px;
+}
+.form .checkout-btn {
+  margin-top: 20px;
+  padding: 20px 0;
+  border-radius: 25px;
+  font-weight: 700;
+  transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  border: none;
+  justify-content: center;
+  fill: #fff;
+  color: #fff;
+  border: 2px solid transparent;
+  background: #d17842;
+  transition: all 200ms;
+}
+.form .checkout-btn:active {
+  scale: 0.95;
+}
+
+.form .checkout-btn:hover {
+  color: #d17842;
+  border: 2px solid #d17842;
+  background: transparent;
+}
+/* Add this CSS at the end of your existing CSS */
+
+@media only screen and (max-width: 768px) {
+  .navbar ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .navbar li {
+    float: none;
+    display: inline-block;
+    text-align: center;
+    margin: 10px 0;
+  }
+  .navbar ul img {
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
+  .container {
+    padding-top: 150px;
+    background-size: cover;
+    background-position: center;
+  }
+  .content {
+    width: 90%;
+    margin: 0 auto;
+    height: auto;
+  }
+  .form {
+    width: 90%;
+    margin: 5rem auto;
+  }
+  .form .split label {
+    width: 100%;
+    text-align: left;
+  }
+  .footer_container .col {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .footer_container ul.social-media-icons {
+    justify-content: center;
+  }
+  .footer_container ul.social-media-icons li {
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+}
+
+/* Additional media queries can be added as per requirement */
+
+
 
 </style>
 <body>
@@ -159,10 +322,47 @@ footer {
 
     </section>
     <div class="container">
-        <div class="text">
-            <p>
-                <!-- write some content like your order is on the way etc -->
-            </p>
+        <div class="content">
+            <section class="add-card page">
+                <form class="form">
+                  <label for="name" class="label">
+                    <span class="title">Full Address</span>
+                    <input
+                      class="input-field"
+                      type="text"
+                      name="input-name"
+                      title="Input title"
+                      placeholder="Enter your full address"
+                    />
+                  </label>
+                  <label for="serialCardNumber" class="label">
+                    <span class="title">Landmark / State</span>
+                    <input
+                      id="serialCardNumber"
+                      class="input-field"
+                      type="number"
+                      name="input-name"
+                      title="Input title"
+                      placeholder="Enter landmark and state"
+                    />
+                  </label>
+                  <div class="split">
+                    <label for="ExDate" class="label">
+                      <span class="title">Pincode</span>
+                      <input
+                        id="ExDate"
+                        class="input-field"
+                        type="text"
+                        name="input-name"
+                        title="Expiry Date"
+                        placeholder="123..."
+                      />
+                    </label>
+                    
+                  </div>
+                  <input class="checkout-btn" type="button" value="Submit" />
+                </form>
+              </section>
         </div>
 
 
