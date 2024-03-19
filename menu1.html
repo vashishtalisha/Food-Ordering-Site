@@ -2,351 +2,321 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our menu</title>
-</head>
-<style>
-    body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
+    <title>MENU</title>
+    <style>
+        body{
+            background-image: url(https://t4.ftcdn.net/jpg/05/71/83/47/360_F_571834789_ujYbUnH190iUokdDhZq7GXeTBRgqYVwa.jpg);
+    background-size: cover;
+    font-family: system-ui;
+    overflow-y: scroll;
+}
+.navbar{
+    /* background-color: blanchedalmond;*/
+    border-radius: 30px; 
+}
+.navbar ul{
+     overflow:auto;/*coz float karne par parent se overflow ho jaega/ */
+}
+.navbar li{
+    float:left;
+    list-style:none;
+    margin:13px 20px;
+    color: aliceblue;
+    
+}
+.navbar li a{
+    text-decoration:none;
+    padding:3px 3px;
+    color:blanchedalmond;
+    font-size: 20px;
+}
+.navbar li a:hover{
+    text-decoration:none;
+    padding:3px 3px;
+    color:black;
+    background-color:blanchedalmond;
 }
 
-.navbar {
-    content: "";
-    opacity: 1;
-    background-image: url(https://i.pinimg.com/564x/4b/28/97/4b28976ff4701042266192be7970b927.jpg);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    opacity: 0.8;
-    z-index: -1;
-}
-
-
-.navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.navbar li {
-    float: left;
-    margin: 13px 20px;
-}
-
-.navbar li a {
-    text-decoration: none;
-    padding: 3px 3px;
-    color: white;
-    font-size: 18px;
-    display: block;
-}
-
-.navbar li a:hover {
-    text-decoration: none;
-    padding: 3px 3px;
-    background-color: rgb(32, 31, 31);
-}
-
-.navbar .search {
+.search {
     float: right;
-    color: rgb(7, 0, 0);
+    color: brown;
     padding: 12px 12px;
 }
 
-.navbar input {
+.search input {
     border: 2px solid black;
     border-radius: 14px;
     padding: 7px 9px;
     width: 175px;
+    margin-right: 5px;
 }
 
-.second {
-    text-align: center;
-}
-
-.second img {
-    margin-top: 0px;
-    height: 100px;
-    width: 100px;
-    float: left;
-}
-
-h1 {
-    margin: 50px auto;
-    font-size: 40px;
-    color: rgb(38, 37, 36);
-}
-
-.third {
-    padding: 0px;
-}
-
-.menu {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    background-image: url(https://i.pinimg.com/564x/4b/28/97/4b28976ff4701042266192be7970b927.jpg);
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    color: white;
-}
-
-.white-rectangle {
-    max-width: 1600px;
-    margin: 50px auto;
-    background-color: white;
-    padding: 20px;
-}
-
-.restaurant-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-}
-
-.restaurant-card {
-    width: 100%;
-    border: 1px solid #ddd;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.restaurant-image {
-    height: 250px;
-    width: 100%;
-    object-fit: cover;
-}
-
-h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-    color: #343a40;
-}
-
-p {
-    margin: 0;
-    color: #6c757d;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 600px;
-    width: 100%;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+.search button {
+    background-color: #1C1F25;
+    color: #fff;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 14px;
     cursor: pointer;
 }
 
-.footer_container {
-    opacity: 0.9;
-    background-image: url(https://i.pinimg.com/564x/4b/28/97/4b28976ff4701042266192be7970b927.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+.search button:hover {
+    background-color: #ec6b01;
+}
+/* .navbar input{
+    border:2px solid black;
+    border-radius: 14px;
+    padding:7px 9px;
+    width:175px;
+} */
+.container{
+    width: 1200px;
+    height: 1700px;
+    margin: auto;
+    transition: 0.5s;
+    text-align: center;
+    background-image: url(https://w0.peakpx.com/wallpaper/565/109/HD-wallpaper-vintage-ink-food-background-material-food-background-food-background-hand-drawn-lettering.jpg);
+    font-family: serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: larger;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 20px;
+    grid-template-rows: auto;
+    overflow-y: auto;
+    scrollbar-width:  thin;
+    scrollbar-color: black;
+    overscroll-behavior:inherit;
+}
+header{
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    margin-top: 50px;
+}
+header .shopping{
     position: relative;
-    background-color: #394047;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    text-align: right;
 }
-
-h5 {
-    font-size: 2rem;
-    text-align: center;
-    color: #fff;
-    margin-bottom: 20px;
+header .shopping img{
+    width: 40px;
 }
-h1{
-    color: #ddd;
-}
-
-.footer_container {
-  font-family: 'Arial', sans-serif;
-  opacity: 0.8;
-  background-image: url(https://i.pinimg.com/564x/4b/28/97/4b28976ff4701042266192be7970b927.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 250px; /* Adjusted height for smaller screens */
-  position: absolute;
-  margin-bottom: 5px;
-  background-color: #394047; /* Light gray background */
-}
-h5{
-    font-size: 2rem;
-    text-align: left;
-}
-/* Style the entire footer */
-.footer_container footer {
-  display: flex;
-  padding-left: 30px;
-  padding-right: 30px;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-/* Style the individual columns within the footer */
-.footer_container .col {
-  margin-bottom: 1.5rem;
-}
-
-/* Style the links in the footer */
-.footer_container a {
-  color: #007bff; /* Bootstrap's primary color */
-  text-decoration: none;
-  font: size 2.5em;
-}
-
-.footer_container a:hover {
-  text-decoration: underline;
-}
-.footer_container ul {
-  list-style-type: none;
-  margin-top:0;
-}
-.footer_container li{
-    margin-top: 10px;
-    text-align: left;
-}
-
-/* Style the copyright text */
-.footer_container .text-body-secondary {
-  color:aliceblue; /* Bootstrap's secondary text color */
-}
-
-/* Add some spacing and border to the footer */
-.footer_container .py-5 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.footer_container .border-top {
-  border-top: 1px solid #dee2e6; /* Bootstrap's border color */
-}
-ul.social-media-icons {
-    list-style: none;
-    padding: 0;
+header .shopping span{
+    background: red;
+    border-radius: 50%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: absolute;
+    top: -5px;
+    left: 80%;
+    padding: 3px 10px;
 }
-ul.social-media-icons li {
-    margin: 0 10px;
-    margin-top: 40px;
-    margin-right: 20px;
+.list{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+    column-gap: 40px;
+    row-gap: 60px;
+    margin-top: 50px;
+    margin-left: 33px;
+    margin-right:53px;
+ background: #212121;
+ box-shadow: 15px 15px 30px rgb(25, 25, 25),
+             -15px -15px 30px rgb(60, 60, 60);
 
 }
 
-.lala {
-    font-size: 40px;
-    color: white;
+.list .item{
     text-align: center;
+    padding: 20px;
+    width: 20rem;
+    height: 35rem;
+    margin-left: 63px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+     background: rgb(236, 236, 236);
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset; 
+
+
 }
-.heading{
-    padding-top: 40px;
+.list .item img{
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
 }
-.logo{
-    padding-left:50px ;
-    margin-left: 10px;
-    padding-top: 30px;
+.list .item .title{
+    font-weight: 600;
+}
+.list .item .price{
+    margin: 15px;
+}
+.list .item button{
+ width: 9em;
+ height: 3em;
+ border-radius: 30em;
+ font-size: 15px;
+ font-family: inherit;
+ border: none;
+ position: relative;
+ overflow: hidden;
+ z-index: 1;
+ box-shadow: 6px 6px 12px #c5c5c5,
+             -6px -6px 12px #ffffff;
+}
+
+.list .item button::before {
+ content: '';
+ width: 0;
+ height: 3em;
+ border-radius: 30em;
+ position: absolute;
+ top: 0;
+ left: 0;
+ background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+ transition: .5s ease;
+ display: block;
+ z-index: -1;
+}
+
+.list .item button:hover::before {
+ width: 9em;
+}
+.Cart{
+    position: fixed;
+    top:0;
+    left: 100%;
+    width: 500px;
+    background-color: #453E3B;
+    height: 100vh;
+    transition: 0.5s;
+    overflow-y: auto;
+    flex-direction: column;
+}
+.active .Cart{
+    left: calc(100% - 500px);
+}
+.active .container{
+   transform: translateX(-200px);
+}
+.Cart h1{
+    color: #E8BC0E;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.Cart .checkOut{
+    
+    display: flex;
+    justify-content: space-between; /* Spread the elements horizontally */
+    align-items: center; /* Center the elements vertically */
+    padding: 10px;
+    background-color: #1C1F25;
+    color: #fff;
+    position: sticky;
+    bottom: 0;
+
+}
+.Cart .checkOut div{
+    background-color: #E8BC0E;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Cart .checkOut div:nth-child(2){
+    background-color: #1C1F25;
+    color: #fff;
+}
+.Cart .checkOut div:nth-child(3) {
+    background-color: #1C1F25;
+    color: #fff;
+}
+.listCart{
+    padding: 10px;
+    flex:1;
+}
+.listCart li{
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+.listCart li div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.listCart li img{
+    width: 90%;
+}
+.listCart li button{
+    background-color: #fff5;
+    border: none;
+}
+.btn:hover {
+    background-color: #ec6b01;
+    color: rgb(255, 255, 255);
+}
+.listCart .count{
+    margin: 0 10px;
 }
 footer {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #333;
     color: #fff;
+    text-align: center;
     padding: 10px 0;
 }
-@media (max-width: 600px) {
-    .restaurant-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
-    }
-    .restaurant-card{
-        backdrop-filter: blur(16px) saturate(180%);
-    -webkit-backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(137, 160, 203, 0.75);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
-        height:180px;
-        width: 130px;
-        margin-left: 30px;
-    }
-    .restaurant-info h2{
-        font-size: 10px;
-    }
-    .restaurant-info{
-        font-size: 20%;
-    }
-    .restaurant-image{
-        height: 80px;
-        width: 100%;
-    }
+/* Style for "Foodies" text */
+/* Style for "Foodies" text */
+.foodies-box {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    background: linear-gradient(45deg, black, white); /* Black to white gradient */
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 10px; /* Rounded corners */
+}
+.foodies-text {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    background: linear-gradient(45deg, black, white); /* Black to white gradient */
+    padding: 10px 20px; /* Adjust padding as needed */
+    border-radius: 10px; /* Rounded corners */
+}
 
-    .white-rectangle{
-        margin: 17px 10px 10px 10px;
-    }
-    .menu{
-        height: auto;
-        width: 90%;
-        display: block;
-    }
-    .third{
-        height: auto;
-    }
-    .footer_container {
-    height: auto; /* Auto height for smaller screens */
-    padding-top: 20px; /* Adjusted padding */
-    padding-bottom: 20px; /* Adjusted padding */
-  }
-
-  /* Adjusted styles for smaller screens */
-  .footer_container .col {
-    margin-bottom: 0.5rem;
-  }
-
-  .footer_container .py-5 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-    .heading{
-        font-size: 20px;
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .foodies-text {
+        display: none; /* Hide "Foodies" text on smaller screens */
     }
 }
 
-</style>
-<body>
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .foodies-text {
+        display: none; /* Hide "Foodies" text on smaller screens */
+    }
+}
+
+    </style>
+</head>
+<body class="">
     <section class="first">
         <header>
+            <!-- Add "Foodies" here -->
             <nav class="navbar">
                 <ul>
                     <li><a href="ordering.html" ><b>Home</b></a></lI>
@@ -354,452 +324,349 @@ footer {
                     <li><a href="about.html"><b>About</b>
                     </a></li>
                     <li><a href="contact.html"><b>Contact</b></a></li>
-    
+                    <div class="foodies-box">
+                    <div class="foodies-text">FOODIES !</div>
+                    </div>
+                    <div class="search">
+                        <input type="text" id="searchInput" placeholder="Search...">
+                        <button onclick="searchMenu()">Search</button>
+                    </div>
                 
-                <div class="search">
-                    <input type="text" name="search" id="search" placeholder="Enter your location or cuisine">
-                </div>
                 </ul>
             </nav>
         </header>
-    </section>
-    <section class="second">
-        <img class="logo"  src="logowhite.png" alt="">
-        <h1 class="heading" id="main">FOOODIES!!</h1>
-    </section>
-    <section class="third">
+    
+    <div class="container">
+        <header>
+            <h1><b>MENU</b></h1>
+            <div class="shopping">
+                <img src="https://cdn-icons-png.flaticon.com/128/3737/3737151.png" alt="Loading">
+                <span class="quantity">0</span>
+            </div>
+        </header>
+
+        <div class="list">
+          
+        </div>
+    </div>
+    <div class="Cart">
+        <h1>Cart</h1>
+        <ul class="listCart">
+        </ul>
+        <div class="checkOut">
+            <div class="total">0</div>
+            <div class="closeShopping">Close</div>
+            <div class="checkoutButton">
+                <a href="payment.html">CHECKOUT</a>
+            </div>
+        </div>
+    </div>
+
+    <script >
+        let openShopping = document.querySelector('.shopping');
+let closeShopping = document.querySelector('.closeShopping');
+let list = document.querySelector('.list');
+let listCart = document.querySelector('.listCart');
+let body = document.querySelector('body');
+let total = document.querySelector('.total');
+let quantity = document.querySelector('.quantity');
+
+openShopping.addEventListener('click', ()=>{
+    body.classList.add('active');
+})
+closeShopping.addEventListener('click', ()=>{
+    body.classList.remove('active');
+})
+
+let products = [
+    {
+        id: 1,
+        name: 'PAELLA',
+        image: 'https://cookingformysoul.com/wp-content/uploads/2023/01/feat-chicken-chorizo-paella-min.jpg',
+        description: '<p>Hailing from Spain, paella is a vibrant and flavorful rice dish cooked with a variety of ingredients like saffron, chicken, seafood, and vegetables. The dish is known for its distinct yellow color and is traditionally prepared in a wide, shallow pan. Location: Rajpura, India',
+        price:  400
+    },
+    {
+        id: 2,
+        name: 'PAD THAI',
+        image: 'https://lovingitvegan.com/wp-content/uploads/2022/06/Vegan-Pad-Thai-Square-3.jpg',
+        description:'Originating from Thailand, Pad Thai is a stir-fried noodle dish featuring rice noodles, tofu or shrimp, bean sprouts, peanuts, and lime. The combination of sweet, sour, and spicy flavors makes Pad Thai a beloved and flavorful street food.',
+        price: 350
+    },
+    {
+        id: 3,
+        name: 'SUSHI ROLLS',
+        image: 'https://www.allrecipes.com/thmb/PujANugNXQW7ugnivQt8b4_-13k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/RM-169856-CreamCheeseandCrabSushiRolls-ddmfs-3x4-6421-8d233e210db3458f8574bafad1c69e70.jpg" alt="Restaurant 1" class="restaurant-image',
+        description:'Sushi rolls are a traditional Japanese dish consisting of vinegared rice, various ingredients like raw or cooked seafood, vegetables, and sometimes tropical fruits, all rolled in seaweed sheets. Served with soy sauce and wasabi, sushi rolls offer a delightful blend of textures and flavors. Served with soy sauce and wasabi, sushi rolls offer a delightful blend of textures and flavors.',
+        price: 300
+    },
+    {
+        id: 4,
+        name: 'CAPRESE SALAD',
+        image: 'https://www.modernhoney.com/wp-content/uploads/2021/07/Caprese-Salad-1-scaled.jpg',
+        description:'A refreshing Italian salad, Caprese combines fresh tomatoes, mozzarella cheese, and basil leaves. Drizzled with balsamic glaze and olive oil, this simple yet elegant dish highlights the vibrant flavors of ripe tomatoes and creamy mozzarella. Location: Rajpura, India',
+        price: 500
+    },
+    {
+        id: 5,
+        name: 'MISO SOUP',
+        image: 'https://hips.hearstapps.com/hmg-prod/images/miso-soup-index-65720e5b6c60f.jpg',
+        description:'A traditional Japanese soup, miso soup is made from fermented soybean paste (miso) mixed with dashi broth, seaweed, tofu and green onions. This light and nourishing soup are commonly served as a starter in Japanese cuisine. Location: Rajpura, India',
+        price: 150
+    },
+    {
+    id: 6,
+        name: 'PASTA CARBONARA',
+        image: 'https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-superJumbo-v2.jpg',
+        description:'Pasta varieties coated in a creamy sauce made with eggs, cheese (usually Pecorino Romano), pancetta, and black pepper. The result is a rich and comforting dish with a perfect balance of flavors. Location: Rajpura, India',
+        price: 150
+    },
+    {
+    id: 7,
+        name: 'HUNGARIAN STEW',
+        image: 'https://littlespoonfarm.com/wp-content/uploads/2022/12/Hungarian-beef-goulash-recipe.jpg',
+        description:'Goulash consists of tender chicken, onions, bell peppers, and tomatoes, flavored with paprika and other spices. This hearty dish is often served with noodles or bread and offers a warm and satisfying meal, especially during colder seasons. Location: Rajpura, India',
+        price: 230
+    },
+    {
+    id: 8,
+        name: 'RATATOUILLE',
+        image: 'https://www.allrecipes.com/thmb/F1rucOY3FQT5Ic0oyxdLoqU_yKc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/222006-disneys-ratatouille-DDMFS-4x3-36eb15843ab548a79e7aab761dac92e1.jpg',
+        description:'Originating from Provence, France, Ratatouille is a vegetable medley dish made with eggplant, zucchini, bell peppers, onions, and tomatoes. Typically seasoned with herbs like thyme and rosemary, it is a flavorful and colorful dish. Location: Rajpura, India',
+        price: 400
+    },
+    {
+    id: 9,
+        name: 'TACOS AL PASTOR',
+        image: 'https://iamafoodblog.b-cdn.net/wp-content/uploads/2021/05/al-pastor-3507w.jpg',
+        description:'A Mexican street food classic featuring marinated and spit-roasted pork, often served with pineapple, cilantro, onions, and a squeeze of lime. The combination of savory and sweet flavors makes it a popular choice. Location: Rajpura, India',
+        price: 100
+    },
+    {
+    id: 10,
+        name: 'VIETNAMESE NOODLE SOUP',
+        image: 'https://www.foodandwine.com/thmb/NpvuFzYVBmhs5G9VoqdQ5m4kMuM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicken-pho-14-FT-RECIPE1222-b82ecb87d5fa4bf0af1b4468c807a560.jpg',
+        description:'A Vietnamese noodle soup, Pho consists of rice noodles in a fragrant broth made with beef or chicken, accompanied by herbs, bean sprouts, lime, and chili. It is a comforting and aromatic dish enjoyed throughout Vietnam. Location: Rajpura, India',
+        price: 150
+    },
+    {
+    id: 11,
+        name: 'SHRIMP SCAMPI',
+        image: 'https://www.foodnetwork.com/content/dam/images/food/fullset/2009/1/13/1/vday_shrimpscampi_4493_s4x3.jpg',
+        description:'Shrimp scampi is an Italian-American dish featuring shrimp sautéed in garlic, butter, white wine, and lemon juice. It is often served over pasta, providing a delicious blend of garlic-infused flavors. Location: Rajpura, India',
+        price: 280
+    },
+    {
+    id: 12,
+        name: 'FALAFEL',
+        image: 'https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/Falafel-main-1.jpg',
+        description:'A Middle Eastern favorite, Falafel consists of deep-fried balls or patties made from ground chickpeas or fava beans. Typically served in pita bread with tahini sauce and vegetables, falafel offers a satisfying and flavorful vegetarian option. Location: Rajpura, India',
+        price: 200
+    },
+    {
+    id: 13,
+        name: 'CEVICHE',
+        image: 'https://downshiftology.com/wp-content/uploads/2023/04/How-To-Make-Ceviche-4.jpg',
+        description:'Ceviche is a popular Latin American dish, particularly in Peru, where raw fish or seafood is cured in citrus juices, usually lime or lemon. Mixed with onions, tomatoes, cilantro, and chili peppers, it creates a refreshing and tangy seafood salad. Location: Rajpura, India',
+        price: 150
+    },
+    {
+    id: 14,
+        name: 'GYOZA',
+        image: 'https://japanesetaste.com/cdn/shop/articles/how-to-make-gyoza-japanese-dumplings-at-home-japanese-taste.jpg',
+        description:'Gyoza, also known as potstickers, are Japanese dumplings filled with minced meat (chicken), vegetables, and seasonings. These dumplings are typically pan-fried and served with a soy-based dipping sauce. Location: Rajpura, India',
+        price: 200
+    },
+    {
+    id: 15,
+        name: 'EGGPLANT PARMESAN',
+        image: 'https://thecozycook.com/wp-content/uploads/2020/06/Eggplant-Parmesan-Recipe-f.jpg',
+        description:'Eggplant Parmesan, or Melanzane alla Parmigiana, is an Italian dish featuring sliced and breaded eggplant, layered with marinara sauce and melted mozzarella and Parmesan cheeses. Baked to perfection, it offers a delicious and hearty vegetarian option. Location: Rajpura, India',
+        price: 340
+    },
+    {
+    id: 16,
+        name: 'CHIMICHANGA',
+        image: 'https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2022/05/Chimichangas-20.jpg',
+        description:'A Tex-Mex delight, Chimichanga consists of a deep-fried burrito filled with seasoned meat (commonly beef or chicken), beans, and cheese. It is often served with guacamole, salsa, and sour cream. Location: Rajpura, India',
+        price: 250
+    },
+    {
+    id: 17,
+        name: 'TOM YUM SOUP ',
+        image: 'https://hot-thai-kitchen.com/wp-content/uploads/2023/02/tom-yum-wings-blog.jpg',
+        description:'TOM YUM SOUP is a popular Thai soup known for its spicy and sour flavors. It is typically includes shrimp, mushrooms, lemongrass, lime leaves, and chili peppers in a fragrant broth made with coconut milk or clear broth. Location: Rajpura, India',
+        price: 350
+    },
+    {
+    id: 18,
+        name: 'CROISSANT',
+        image: 'https://www.linoui.in/cdn/shop/articles/Linoui_Blogs.png',
+        description:'A classic French pastry, a croissant is a buttery and flaky crescent-shaped roll made from layered dough. Whether enjoyed plain or filled with chocolate or almond paste, a fresh croissant is a delightful breakfast or snack. Location: Rajpura, India',
+        price: 80
+    },
+    
+];
+let listCarts  = [];
+function initApp(){
+    products.forEach((value, key) =>{
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('item');
+        newDiv.innerHTML = `
+        <img src="${value.image}">
+        <div class="title">${value.name}</div>
+        <div class="price">${value.price.toLocaleString()}</div>
+        <div class="description">${value.description}</div>
+        <button onclick="addToCart(${key})">Add To Cart</button>`;
         
-          <div class="menu" id="menu-container">
-            <!-- Default menu content goes here -->
-            <h1 class="lala">OUR MENU</h1>
-            
-            <div class="white-rectangle">
-                <div class="restaurant-container">
-                    <!-- Restaurant 1 -->
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://www.allrecipes.com/thmb/PujANugNXQW7ugnivQt8b4_-13k=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/RM-169856-CreamCheeseandCrabSushiRolls-ddmfs-3x4-6421-8d233e210db3458f8574bafad1c69e70.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>SUSHI ROLLS</h2>
-                            <p>Sushi rolls are a traditional Japanese dish consisting of vinegared rice, various ingredients like raw or cooked seafood, vegetables, 
-                                and sometimes tropical fruits, all rolled in seaweed sheets.  </p>
-                            <p>Served with soy sauce and wasabi, sushi rolls offer a delightful blend of textures and flavors.</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img  src="https://lovingitvegan.com/wp-content/uploads/2022/06/Vegan-Pad-Thai-Square-3.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>PAD THAI </h2>
-                            <p>Originating from Thailand, Pad Thai is a stir-fried noodle dish featuring rice noodles, tofu or shrimp, bean sprouts, peanuts, and lime.
-                                 The combination of sweet, sour, and spicy flavors makes Pad Thai a beloved and flavorful street food. </p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://www.modernhoney.com/wp-content/uploads/2021/07/Caprese-Salad-1-scaled.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>CAPRESE SALAD</h2>
-                            <p>A refreshing Italian salad, Caprese combines fresh tomatoes, mozzarella cheese, and basil leaves. Drizzled with balsamic glaze and olive oil, this simple yet elegant dish highlights the vibrant flavors of ripe tomatoes and creamy mozzarella.
-                                . </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://cookingformysoul.com/wp-content/uploads/2023/01/feat-chicken-chorizo-paella-min.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>PAELLA</h2>
-                            <p>Hailing from Spain, paella is a vibrant and flavorful rice dish cooked with a variety of ingredients like saffron, chicken,
-                                 seafood, and vegetables. The dish is known for its distinct yellow color and is traditionally prepared in a wide, shallow pan.</p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://www.simplyrecipes.com/thmb/J4kA2m6jKMgkQwZhG-RYpjZBeFQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Guacamole-LEAD-6-2-64cfcca253c8421dad4e3fad830219f6.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>GUACAMOLE</h2>
-                            <p>A popular Mexican dip, guacamole is made from mashed avocados mixed with lime juice, tomatoes, onions, and cilantro.
-                                 This creamy and flavorful concoction is often served with tortilla chips or as a topping for tacos and nachos.. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://hips.hearstapps.com/hmg-prod/images/miso-soup-index-65720e5b6c60f.jpg?crop=0.502xw:1.00xh;0.00160xw,0&resize=1200:*"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>MISO SOUP</h2>
-                            <p>A traditional Japanese soup, miso soup is made from fermented soybean paste (miso) mixed with dashi broth, seaweed, tofu,
-                                 and green onions. This light and nourishing soup are commonly served as a starter in Japanese cuisine.. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-superJumbo-v2.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2> PASTA CARBONARA </h2>
-                            <p>pasta varieties coated in a creamy sauce made with eggs, cheese (usually Pecorino Romano), pancetta, and black pepper. 
-                                The result is a rich and comforting dish with a perfect balance of flavors. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://littlespoonfarm.com/wp-content/uploads/2022/12/Hungarian-beef-goulash-recipe.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>HUNGARIAN STEW</h2>
-                            <p>, goulash consists of tender chicken, onions, bell peppers, and tomatoes, flavored with paprika and other spices.
-                                 This hearty dish is often served with noodles or bread and offers a warm and satisfying meal, especially during colder seasons. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://iamafoodblog.b-cdn.net/wp-content/uploads/2021/05/al-pastor-3507w.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>TACOS AL PASTOR</h2>
-                            <p>a Mexican street food classic featuring marinated and spit-roasted pork, often served with pineapple, cilantro, onions, and a squeeze of lime.
-                                 The combination of savory and sweet flavors makes it a popular choice. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://www.allrecipes.com/thmb/F1rucOY3FQT5Ic0oyxdLoqU_yKc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/222006-disneys-ratatouille-DDMFS-4x3-36eb15843ab548a79e7aab761dac92e1.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>RATATOUILLE</h2>
-                            <p>Originating from Provence, France, Ratatouille is a vegetable medley dish made with eggplant, zucchini, bell peppers, onions, and tomatoes.
-                                 Typically seasoned with herbs like thyme and rosemary, it's a flavorful and colorful dish. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://www.foodandwine.com/thmb/NpvuFzYVBmhs5G9VoqdQ5m4kMuM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicken-pho-14-FT-RECIPE1222-b82ecb87d5fa4bf0af1b4468c807a560.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>VIETNAMESE NOODLE SOUP</h2>
-                            <p>A Vietnamese noodle soup, Pho consists of rice noodles in a fragrant broth made with beef or chicken, accompanied by herbs, bean sprouts, lime, and chili. 
-                                It's a comforting and aromatic dish enjoyed throughout Vietnam. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://www.foodnetwork.com/content/dam/images/food/fullset/2009/1/13/1/vday_shrimpscampi_4493_s4x3.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>SHRIMP SCAMPI </h2>
-                            <p>Shrimp scampi is an Italian-American dish featuring shrimp sautéed in garlic, butter, white wine, and lemon juice.
-                                 It's often served over pasta, providing a delicious blend of garlic-infused flavors.</p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2023/10/Falafel-main-1.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>FALAFEL </h2>
-                            <p>A Middle Eastern favorite, Falafel consists of deep-fried balls or patties made from ground chickpeas or fava beans. 
-                                Typically served in pita bread with tahini sauce and vegetables, falafel offers a satisfying and flavorful vegetarian option. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
+    
+        list.appendChild(newDiv);
+    })
+}
+initApp();
+function addToCart(key){
+    if(listCarts[key] == null){
+        // copy product form list to list Cart
+        listCarts[key] = JSON.parse(JSON.stringify(products[key]));
+        listCarts[key].quantity = 1;
+    }
+    reloadCart();
+}
+function reloadCart(){
+    listCart.innerHTML = '';
+    let count = 0;
+    let totalPrice = 0;
+    listCarts.forEach((value, key)=>{
+        totalPrice = totalPrice + value.price;
+        count = count + value.quantity;
+        if(value != null){
+            let newDiv = document.createElement('li');
+            newDiv.innerHTML = `
+                <div><img src="${value.image}"/></div>
+                <div>${value.name}</div>
+                <div>${value.price.toLocaleString()}</div>
+                <div>
+                    <button onclick="changeQuantity(${key}, ${value.quantity - 1})">-</button>
+                    <div class="count">${value.quantity}</div>
+                    <button onclick="changeQuantity(${key}, ${value.quantity + 1})">+</button>
+                </div>`;
+                listCart.appendChild(newDiv);
+        }
+    })
+    total.innerText = totalPrice.toLocaleString();
+    quantity.innerText = count;
+}
+function changeQuantity(key, quantity){
+    if(quantity == 0){
+        delete listCarts[key];
+    }else{
+        listCarts[key].quantity = quantity;
+        listCarts[key].price = quantity * products[key].price;
+    }
+    reloadCart();
+}
 
 
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src=" https://downshiftology.com/wp-content/uploads/2023/04/How-To-Make-Ceviche-4.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>CEVICHE </h2>
-                            <p>Ceviche is a popular Latin American dish, particularly in Peru, where raw fish or seafood is cured in
-                                 citrus juices, usually lime or lemon. Mixed with onions, tomatoes, cilantro, and chili peppers, it creates a refreshing and tangy seafood salad. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
 
 
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://japanesetaste.com/cdn/shop/articles/how-to-make-gyoza-japanese-dumplings-at-home-japanese-taste.jpg?v=1694487043&width=5760"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>GYOZA</h2>
-                            <p>Gyoza, also known as potstickers, are Japanese dumplings filled with minced meat (chicken), vegetables, and seasonings.
-                                 These dumplings are typically pan-fried and served with a soy-based dipping sauce. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
 
 
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://thecozycook.com/wp-content/uploads/2020/06/Eggplant-Parmesan-Recipe-f.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>EGGPLANT PARMESAN</h2>
-                            <p>Eggplant Parmesan, or Melanzane alla Parmigiana, is an Italian dish featuring sliced and breaded eggplant, layered with marinara sauce and melted mozzarella and Parmesan cheeses.
-                                 Baked to perfection, it offers a delicious and hearty vegetarian option. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
+let originalProducts = [];
+
+function initApp() {
+    products.forEach((value, key) => {
+       
+        let newDiv = document.createElement('div');
+        newDiv.classList.add('item');
+        newDiv.innerHTML = `
+        <img src="${value.image}">
+        <div class="title">${value.name}</div>
+        <div class="price">${value.price.toLocaleString()}</div>
+        <div class="description">${value.description}</div>
+        <button onclick="addToCart(${key})">Add To Cart</button>`;
+        
+        list.appendChild(newDiv);
+    });
+
+    
+
+    // Store the original list
+    originalProducts = [...products];
+}
+function resetMenu() {
+    displayMenu();
+    document.getElementById('searchInput').value = ''; // Clear the search input
+}
+function searchMenu() {
+    const searchInput = document.getElementById('searchInput').value.toLowerCase();
+
+    if (searchInput.trim() === '') {
+        // If the search input is empty, reset to the original menu
+        resetMenu();
+    } else {
+        // Filter products based on the search input
+        const filteredProducts = originalProducts.filter(product =>
+            product.name.toLowerCase().includes(searchInput) ||
+            product.description.toLowerCase().includes(searchInput)
+        );
+
+        // Display the filtered menu
+        displayFilteredMenu(filteredProducts);
+    }
+}
 
 
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2022/05/Chimichangas-20.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>CHIMICHANGA</h2>
-                            <p>. A Tex-Mex delight, Chimichanga consists of a deep-fried burrito filled with seasoned meat (commonly beef or chicken), beans, and cheese. 
-                                It's often served with guacamole, salsa, and sour cream. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
 
 
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://hot-thai-kitchen.com/wp-content/uploads/2023/02/tom-yum-wings-blog.jpg"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>TOM YUM SOUP </h2>
-                            <p>TOM YUM SOUP is a popular Thai soup known for its spicy and sour flavors.
-                                 It typically includes shrimp, mushrooms, lemongrass, lime leaves, and chili peppers in a fragrant broth made with coconut milk or clear broth. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
+    
+
+    function searchMenu() {
+        const searchInput = document.getElementById('searchInput').value.toLowerCase();
+
+        // Filter products based on the search input
+        const filteredProducts = products.filter(product =>
+            product.name.toLowerCase().includes(searchInput) || 
+            product.description.toLowerCase().includes(searchInput)
+        );
+
+        // Display the filtered menu
+        displayFilteredMenu(filteredProducts);
+    }
+
+    
+    function displayFilteredMenu(filteredProducts) {
+        const list = document.querySelector('.list');
+        list.innerHTML = ''; // Clear existing items
+
+        filteredProducts.forEach(product => {
+            const newDiv = document.createElement('div');
+            newDiv.classList.add('item');
+            newDiv.innerHTML = `
+                <img src="${product.image}">
+                <div class="title">${product.name}</div>
+                <div class="price">${product.price.toLocaleString()}</div>
+                <div class="description">${product.description}</div>
+                <button onclick="addToCart(${product.id - 1})">Add To Cart</button>`;
+
+            list.appendChild(newDiv);
+        });
+    }
 
 
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://www.linoui.in/cdn/shop/articles/Linoui_Blogs.png?v=1671109119"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>CROISSANT</h2>
-                            <p>A classic French pastry, a croissant is a buttery and flaky crescent-shaped roll made from layered dough.
-                                 Whether enjoyed plain or filled with chocolate or almond paste, a fresh croissant is a delightful breakfast or snack. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
 
 
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_2MFG30NrKl-rHuJSXzPPu1-1W9r8ljzNA&usqp=CAU"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>SAVOIR</h2>
-                            <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
 
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_2MFG30NrKl-rHuJSXzPPu1-1W9r8ljzNA&usqp=CAU"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>SAVOIR</h2>
-                            <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
 
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_2MFG30NrKl-rHuJSXzPPu1-1W9r8ljzNA&usqp=CAU"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>SAVOIR</h2>
-                            <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
+    
+        
+    
 
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_2MFG30NrKl-rHuJSXzPPu1-1W9r8ljzNA&usqp=CAU"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>SAVOIR</h2>
-                            <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
+    
+</script>
 
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_2MFG30NrKl-rHuJSXzPPu1-1W9r8ljzNA&usqp=CAU"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>SAVOIR</h2>
-                            <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_2MFG30NrKl-rHuJSXzPPu1-1W9r8ljzNA&usqp=CAU"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>SAVOIR</h2>
-                            <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_2MFG30NrKl-rHuJSXzPPu1-1W9r8ljzNA&usqp=CAU"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>SAVOIR</h2>
-                            <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_2MFG30NrKl-rHuJSXzPPu1-1W9r8ljzNA&usqp=CAU"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>SAVOIR</h2>
-                            <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-
-                    <div class="restaurant-card" onclick="openModal('modal1')">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC_2MFG30NrKl-rHuJSXzPPu1-1W9r8ljzNA&usqp=CAU"
-                            alt="Restaurant 1" class="restaurant-image">
-                        <div class="restaurant-info">
-                            <h2>SAVOIR</h2>
-                            <p>Restaurant, establishment where refreshments or meals may be procured by the public. </p>
-                            <p>Location: Rajpura, India</p>
-                            <a href="javascript:void(0);" onclick="openModal('modal1')"
-                                style="color: #007bff; text-decoration: none;">View Menu</a>
-                        </div>
-                    </div>
-                   
-            </div>
-
-          </div>
-    </section>
-    <div class="footer_container">
-        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-          <div class="col mb-3">
-                <img  class=" footer_logo" style="height: 200px; width: 200px;" src="logowhite.png" alt="logo of FOOODIES">
-            <p class="text-body-secondary" style="text-align: center;font-size: 30px;">© 2024 FOOODIES.pvt.ltd</p>
-          </div>
-
-          <div class="col mb-3">
-
-          </div>
-
-          <div class="col mb-3">
-            <h5>Address</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"></a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-            </ul>
-          </div>
-
-          <div class="col mb-3">
-            <h5>Contacts</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-            </ul>
-          </div>
-
-          <div class="col mb-3">
-            <h5>Links</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
-            </ul>
-            <div >
-                <ul class="social-media-icons">
-                    <li><a class="text-body-secondary" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-                      <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                    </svg></a></li>
-                    <li><a class="text-body-secondary" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
-                    </svg></a></li>
-                    <li><a class="text-body-secondary" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
-                   </svg></a></li>
-                </ul>
-            </div>
-
-          </div>
-        </footer>
-      </div>
+    
+    <footer>
+        <p>&copy; 2023 FOOODIES😎 </p>
+    </footer>
 </body>
-
 </html>
