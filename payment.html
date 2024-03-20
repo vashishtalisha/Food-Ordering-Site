@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateways - Food Ordering</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-image:url(images/payment.webp);
-    background-size: cover;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiOamP1mF6lDisQ_3myx2e5DHIaIEFqeQf-w&usqp=CAU);
+    background-size: contain; /* Changed from 'cover' to 'contain' */
+    background-attachment: fixed; /* Ensures the image doesn't move when scrolling */
+    background-position: center; /* Centers the image */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
+
+.heading{
     text-align: center;
-    padding: 1em 0;
+    font-size: 3rem;
+    color:rgb(0, 0, 0);
+    padding:1rem;
+    margin:2rem 0;   
 }
-
-header h1 {
-    margin: 0;
+.heading span{
+    color:var(--green);
 }
 
 nav ul {
@@ -35,16 +42,88 @@ nav a {
     text-decoration: none;
     color: #fff;
 }
-
-main {
-    max-width: 800px;
-    margin: 20PX auto;
-    padding: 20px;
-    background-color:rgb(39, 69, 61);
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background:rgb(0, 0, 0);
+    color:#fff;
+    padding:.9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
 }
-
+.btn:hover{
+    background:var(--green);
+}
+header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.5); /* Use rgba to specify color with alpha channel (transparency) */
+        padding: 2rem 9%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+        }
+header .logo{
+    font-size: 2rem;
+    color:rgb(0, 0, 0);
+    font-weight: bolder;
+}
+.logo {
+            font-size: 2rem;
+            color: #000;
+            font-weight: bolder;
+        }
+header .logo span{
+    color:var(--green);
+}
+.navbar {
+            display: flex;
+            align-items: center;
+        }
+header .navbar a{
+    font-size: 1rem;
+    padding:0 1.5rem;
+    color:rgb(0, 0, 0);
+    margin-left: 2rem;
+    text-decoration: none;
+}
+header .navbar a:hover{
+    color:var(--green);
+}
+header .icons a{
+    font-size: 2.5rem;
+    color:rgb(0, 0, 0);
+    margin-left: 1.5rem;
+}
+header .icons a:hover{
+    color:var(--green);
+}
+header #toggler{
+    display: none;
+}
+header .fa-bars{
+    font-size: 3rem;
+    color: #000;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,.3);
+    display: none;
+}
+main{
+    max-width: 800px;
+    margin: 110px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.15); /* Glassmorphism background color with transparency */
+    backdrop-filter: blur(10px); /* Blurring effect */
+    border-radius: 10px; /* Increased border radius for a softer look */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(255, 255, 255, 0.1); /* Soft box shadow */
+}
 h2 {
     font-size: 20px;
     margin-bottom: 20px;
@@ -75,32 +154,129 @@ button {
 button:hover {
     background-color: #555;
 }
+.footer_container {
+  font-family: 'Arial', sans-serif;
+  opacity: 0.9;
+  background-image: url(https://i.pinimg.com/564x/4b/28/97/4b28976ff4701042266192be7970b927.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  margin-bottom: 5px;
+  background-color: #394047; /* Light gray background */
+
+}
+h5{
+    font-size: 2rem;
+    text-align: left;
+}
+/* Style the entire footer */
+.footer_container footer {
+  display: flex;
+  padding-left: 30px;
+  padding-right: 30px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Style the individual columns within the footer */
+.footer_container .col {
+  margin-bottom: 1.5rem;
+}
+
+/* Style the links in the footer */
+.footer_container a {
+  color: #007bff; /* Bootstrap's primary color */
+  text-decoration: none;
+  font: size 2.5em;
+}
+
+.footer_container a:hover {
+  text-decoration: underline;
+}
+.footer_container ul {
+  list-style-type: none;
+  margin-top: 0 ;
+}
+.footer_container li{
+    margin-top: 10px;
+    text-align: left;
+}
+
+/* Style the copyright text */
+.footer_container .text-body-secondary {
+  color:aliceblue; /* Bootstrap's secondary text color */
+}
+
+/* Add some spacing and border to the footer */
+.footer_container .py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.footer_container .border-top {
+  border-top: 1px solid #dee2e6; /* Bootstrap's border color */
+}
+ul.social-media-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+ul.social-media-icons li {
+    margin: 0 10px;
+    margin-top: 40px;
+    margin-right: 20px;
+
+}
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
 footer {
     text-align: center;
     background-color: rgba(0, 0, 0, 0.7);
     color: #fff;
-    padding: 20px 0;
-    font-size: medium;
+    padding: 10px 0;
+}
+.footer_container footer .col .logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.footer_container footer .col img {
+  width: 150px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-right: 10px; /* Add margin at the right for spacing */
+  margin-left: 100px; 
+}
+.divider {
+            border-top: 10px solid #000000; /* Adjust thickness and color as needed */
+            margin: 20px 0; /* Adjust margin as needed */
+        }
+.google-pay-qr-code img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px; /* Adjust as needed */
 }
 
     </style>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Payment Gateways - Food Ordering</title>
-    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>FOOODIES ! </h1>
-        <nav>
-            <ul>
-                <li><a href="ordering.html">Home</a></li>
-                <li><a href="menu.html">Menu</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <div class="logo"><span>FOODIES!</span></div>
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#dishes">Menu</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+</header>
 
     <main>
         <h2>Select a Payment Gateway</h2>
@@ -121,29 +297,7 @@ footer {
                                 
                                             <label for="expiry_date">Expiry Date (MM/YYYY):</label>
                                             <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YYYY" required><br><br>
-                                
-                                            <label for="cvv">CVV:</label>
-                                            <input type="text" id="cvv" name="cvv" required><br><br><br>
-                                        </div> 
-                                        <b><hr></b>
-            
-                                        <div class="payment-options">
-                                            <div class="payment-option">
-                                                <input type="radio" id="DEBIT CARD"  name="paymentMethod" value="debitCard">
-                                                <label for="debitCard">DEBIT CARD</label>
-                                            </div>
-                                                                        <div class="credit-card-fields">
-                                                                            <h2>Debit card details</h2>
-                                                                            
-                                                                            <!-- Credit card form fields -->
-                                                                            <label for="cardholder_name">Cardholder Name:</label>
-                                                                            <input type="text" id="cardholder_name" name="cardholder_name" required><br><br>
-                                                                
-                                                                            <label for="card_number">Card Number:</label>
-                                                                            <input type="text" id="card_number" name="card_number" required><br><br>
-                                                                
-                                                                            <label for="expiry_date">Expiry Date (MM/YYYY):</label>
-                                                                            <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YYYY" required><br><br>
+                                            <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YYYY" required><br><br>
                                                                 
                                                                             <label for="cvv">CVV:</label>
                                                                             <input type="text" id="cvv" name="cvv" required><br><br><br>
@@ -170,6 +324,10 @@ footer {
                                                 <label for="google_pay_password">UPI ID:</label>
                                                 <input type="password" id="google_pay_password" name="google_pay_password" required><br><br>
                                             </div>
+                                            <div>
+                                                <label for="google_pay_qr_image">Google Pay QR Code:</label><br>
+                                                <img src="gpay.jpg" alt="Google Pay QR Code" id="google_pay_qr_image">
+                                            </div>
                                             <b><hr></b>
             </div>
         </div>
@@ -180,7 +338,76 @@ footer {
     </main>
 
     <footer>
-        &copy; 2023 FOOODIES😎. All rights reserved.
+        <div class="footer_container">
+            <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+              <div class="col mb-3">
+                <img src="logowhite.png" alt="Footer Logo">
+                  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+                </a>
+                <p class="text-body-secondary">© 2024 FOOODIES.pvt.ltd</p>
+              </div>
+          
+              <div class="col mb-3">
+          
+              </div>
+          
+              <div class="col mb-3">
+                <h5>Address</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary"> CHITKARA UNIVERSITY<br><br>Chandigarh-Patiala National Highway<br> (NH- 64 Village Jansla, Rajpura,<br> Punjab 140401</a></li>
+                </ul>
+              </div>
+          
+              <div class="col mb-3">
+                <h5>Contacts</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Alisha +91 8570893065 </a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Amrit +91 9501580144</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ananaya +91 7696900089</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Eknoor +91 9877668864 </a></li>
+                </ul>
+              </div>
+          
+              <div class="col mb-3">
+                <h5>Links</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                  <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+                <div >
+                    <ul class="social-media-icons">
+                        <li><a class="text-body-secondary" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+                          <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg></a></li>
+                        <li><a class="text-body-secondary" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg></a></li>
+                        <li><a class="text-body-secondary" href="#"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                       </svg></a></li>
+                    </ul>
+                </div>
+                
+              </div>
+            </footer>
     </footer>
 </body>
+<script>
+        function toggleGooglePayQR() {
+            var googlePayOption = document.getElementById("googlePay");
+            var qrCodeWrapper = document.getElementById("qrCodeWrapper");
+            var qrCodeImage = document.getElementById("qrCodeImage");
+
+            if (googlePayOption.checked) {
+                // Create the QR code image dynamically
+                qrCodeImage.src = "gpay.jpg"; // Set the source of your QR code image
+                qrCodeWrapper.style.display = "block"; // Display the wrapper
+            } else {
+                qrCodeWrapper.style.display = "none"; // Hide the wrapper if Google Pay is not selected
+            }
+        }
+</script>
 </html>
