@@ -19,7 +19,7 @@
      overflow:auto;/*coz float karne par parent se overflow ho jaega/ */
 }
 .navbar li{
-    float:left;
+    float:right;
     list-style:none;
     margin:13px 20px;
     color: aliceblue;
@@ -71,9 +71,9 @@
     width:175px;
 } */
 .container{
-    width: 1200px;
-    height: 1700px;
-    margin: auto;
+    width: 70rem;
+    height: auto;
+    margin: 0rem 5rem 5rem 5rem;
     transition: 0.5s;
     text-align: center;
     background-image: url(https://w0.peakpx.com/wallpaper/565/109/HD-wallpaper-vintage-ink-food-background-material-food-background-food-background-hand-drawn-lettering.jpg);
@@ -85,10 +85,9 @@
     grid-template-columns: auto;
     grid-gap: 20px;
     grid-template-rows: auto;
-    overflow-y: auto;
     scrollbar-width:  thin;
     scrollbar-color: black;
-    overscroll-behavior:inherit;
+    overscroll-behavior:none;
 }
 header{
     display: grid;
@@ -117,13 +116,16 @@ header .shopping span{
 .list{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 90%;
+    width: 62rem;
+    padding-bottom: 20px;
     column-gap: 40px;
     row-gap: 60px;
     margin-top: 50px;
-    margin-left: 33px;
+    margin-left: 50px;
     margin-right:53px;
- background: #212121;
+    margin-bottom: 50px;
+    background-color: rgba(28, 31, 37, 0.606);
+    backdrop-filter: blur(3.5px);
  box-shadow: 15px 15px 30px rgb(25, 25, 25),
              -15px -15px 30px rgb(60, 60, 60);
 
@@ -131,6 +133,7 @@ header .shopping span{
 
 .list .item{
     text-align: center;
+    font-size: 15px;
     padding: 20px;
     width: 20rem;
     height: 35rem;
@@ -156,6 +159,7 @@ header .shopping span{
 .list .item button{
  width: 9em;
  height: 3em;
+ margin-top: 20px;
  border-radius: 30em;
  font-size: 15px;
  font-family: inherit;
@@ -163,8 +167,8 @@ header .shopping span{
  position: relative;
  overflow: hidden;
  z-index: 1;
- box-shadow: 6px 6px 12px #c5c5c5,
-             -6px -6px 12px #ffffff;
+ box-shadow: 6px 6px 12px #75c25d,
+             -6px -6px 12px #96bf62;
 }
 
 .list .item button::before {
@@ -294,6 +298,10 @@ footer {
     padding: 10px 20px; /* Adjust padding as needed */
     border-radius: 10px; /* Rounded corners */
 }
+.navbar img{
+    height: 120px;
+    margin-left: 40px;
+}
 
 /* Media query for smaller screens */
 @media screen and (max-width: 768px) {
@@ -318,14 +326,13 @@ footer {
             <!-- Add "Foodies" here -->
             <nav class="navbar">
                 <ul>
+                    <img src="logowhite.png" alt="logo">
                     <li><a href="ordering.html" ><b>Home</b></a></lI>
                     <li><a href="menu.html" ><b>Menu</b></a></li>
                     <li><a href="about.html"><b>About</b>
                     </a></li>
                     <li><a href="contact.html"><b>Contact</b></a></li>
-                    <div class="foodies-box">
-                    <div class="foodies-text">FOODIES !</div>
-                    </div>
+                    
                     <div class="search">
                         <input type="text" id="searchInput" placeholder="Search...">
                         <button onclick="searchMenu()">Search</button>
@@ -416,7 +423,7 @@ let products = [
     {
     id: 6,
         name: 'PASTA CARBONARA',
-        image: 'https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-superJumbo-v2.jpg',
+        image: 'https://www.modernhoney.com/wp-content/uploads/2023/02/Spaghetti-Carbonara-3-crop-720x763.jpg',
         description:'Pasta varieties coated in a creamy sauce made with eggs, cheese (usually Pecorino Romano), pancetta, and black pepper. The result is a rich and comforting dish with a perfect balance of flavors. Location: Rajpura, India',
         price: 150
     },
